@@ -1,0 +1,10 @@
+]0;~/GoogleDrive/project/Ni/Utility[?1034hNCI-02034757-ML:Utility zhangh24$   temp <- .C("tAKA",AV,KV,A.row,A.col,out=out) [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K)
+bash: syntax error near unexpected token `('
+[KNCI-02034757-ML:Utility zhangh24$ [KNCI-02034757-ML:Utility zhangh24$ ls
+DESCRIPTION	R		man		test
+NAMESPACE	Utility.Rproj	src
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git init
+Initialized empty Git repository in /Users/zhangh24/GoogleDrive/project/Ni/Utility/.git/
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git add -A

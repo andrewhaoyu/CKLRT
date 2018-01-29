@@ -1,0 +1,143 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 17,
+                "name" : "print_dVec(double *, int, char *)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@print_dVec"
+            },
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 29,
+                "name" : "print_iVec(int *, int, char *)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@print_iVec"
+            },
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 43,
+                "name" : "print_dMat(double **, int, int, char *)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@print_dMat"
+            },
+            {
+                "column" : 17,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 58,
+                "name" : "dVec_alloc(int, int, double)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@dVec_alloc"
+            },
+            {
+                "column" : 18,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 76,
+                "name" : "dMat_alloc(int, int, int, double)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@dMat_alloc"
+            },
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 92,
+                "name" : "matrix_free(void **, int)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@matrix_free"
+            },
+            {
+                "column" : 12,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 105,
+                "name" : "all_finite(double *, int)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@all_finite"
+            },
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 120,
+                "name" : "matrixMult(double **, int, int, double **, int, double **)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@matrixMult"
+            },
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 139,
+                "name" : "matrixminus(double **, double **, int, int, double **)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@matrixminus"
+            },
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 152,
+                "name" : "X_y(double **, int, int, double *, double *)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@X_y"
+            },
+            {
+                "column" : 15,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 170,
+                "name" : "dotProd(double *, double *, int)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@dotProd"
+            },
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 183,
+                "name" : "fillMat(double *, int, int, int, double **)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@fillMat"
+            },
+            {
+                "column" : 17,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 208,
+                "name" : "fill_Info(double **, double *, int)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@fill_Info"
+            },
+            {
+                "column" : 13,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 226,
+                "name" : "QuadXKX(double **, double **, int, int, double **)",
+                "parent_name" : "",
+                "usr" : "c:tAKA.c@F@QuadXKX"
+            },
+            {
+                "column" : 6,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+                "kind" : 6,
+                "line" : 249,
+                "name" : "TAKA(double *, double *, int *, int *, double *)",
+                "parent_name" : "",
+                "usr" : "c:@F@TAKA"
+            }
+        ],
+        "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
+        "file_last_write" : 1517262081
+    }
+]
