@@ -8,3 +8,229 @@ fatal: Not a git repository (or any of the parent directories): .git
 ]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git init
 Initialized empty Git repository in /Users/zhangh24/GoogleDrive/project/Ni/Utility/.git/
 ]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git add -A
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git commit -m "first git[K[K[Kcommit -[K"
+[master (root-commit) dfdd5a7] first commit
+ 53 files changed, 1146 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 .Rbuildignore
+ create mode 100644 .Rproj.user/C489B8A4/console06/11327186
+ create mode 100644 .Rproj.user/C489B8A4/console06/11327186.env
+ create mode 100644 .Rproj.user/C489B8A4/console06/INDEX001
+ create mode 100644 .Rproj.user/C489B8A4/cpp-complilation-config
+ create mode 100644 .Rproj.user/C489B8A4/cpp-definition-cache
+ create mode 100644 .Rproj.user/C489B8A4/pcs/debug-breakpoints.pper
+ create mode 100644 .Rproj.user/C489B8A4/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/C489B8A4/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/C489B8A4/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/C489B8A4/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/C489B8A4/persistent-state
+ create mode 100644 .Rproj.user/C489B8A4/rmd-outputs
+ create mode 100644 .Rproj.user/C489B8A4/saved_source_markers
+ create mode 100644 .Rproj.user/C489B8A4/sources/prop/175431F6
+ create mode 100644 .Rproj.user/C489B8A4/sources/prop/7C62039A
+ create mode 100644 .Rproj.user/C489B8A4/sources/prop/97FA1D0D
+ create mode 100644 .Rproj.user/C489B8A4/sources/prop/BBDEAFC7
+ create mode 100644 .Rproj.user/C489B8A4/sources/prop/E06C72A6
+ create mode 100644 .Rproj.user/C489B8A4/sources/prop/F2284652
+ create mode 100644 .Rproj.user/C489B8A4/sources/prop/FE5B821D
+ create mode 100644 .Rproj.user/C489B8A4/sources/prop/INDEX
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/3386E334
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/3386E334-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/4E9E1C8D-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/62677F9A
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/62677F9A-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/63B449B0-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/7DFF3534
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/7DFF3534-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/810C08D1
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/810C08D1-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/82FB9929-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/865F0913
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/865F0913-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/9C53B810
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/9C53B810-contents
+ create mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 DESCRIPTION
+ create mode 100644 NAMESPACE
+ create mode 100644 R/.DS_Store
+ create mode 100644 R/tAKA.R
+ create mode 100644 Utility.Rproj
+ create mode 100644 man/.DS_Store
+ create mode 100644 man/tAKA.Rd
+ create mode 100644 src/Makevars
+ create mode 100755 src/Utility.so
+ create mode 100644 src/tAKA.c
+ create mode 100644 src/tAKA.o
+ create mode 100644 test/test.R
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ ls
+DESCRIPTION	R		man		test
+NAMESPACE	Utility.Rproj	src
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ gt[Kit remote add org[Kigin https://github.com/a ndrewhaoyu
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git push -u origin master
+remote: Not Found
+fatal: repository 'https://github.com/andrewhaoyu/' not found
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git remote add -[Korgi[K[Kigin https://github.com/a ndrewhaoyu/Utility.git
+fatal: remote origin already exists.
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git origi[K[K[K[K[Kremove
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+	remote
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git remote -v
+origin	https://github.com/andrewhaoyu (fetch)
+origin	https://github.com/andrewhaoyu (push)
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git remote set-url https://github.com/andr ewhaoyu/Utility.git
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git remote -v
+origin	https://github.com/andrewhaoyu (fetch)
+origin	https://github.com/andrewhaoyu (push)
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git remote -vset-url https://github.com/andreewhaoyu/Utility.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cohttps://github.com/andrewhaoyu/Utility.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crhttps://github.com/andrewhaoyu/Utility.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cihttps://github.com/andrewhaoyu/Utility.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cghttps://github.com/andrewhaoyu/Utility.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cihttps://github.com/andrewhaoyu/Utility.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnhttps://github.com/andrewhaoyu/Utility.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C https://github.com/andrewhaoyu/Utility.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git remote-[K -v
+origin	https://github.com/andrewhaoyu/Utility.git (fetch)
+origin	https://github.com/andrewhaoyu/Utility.git (push)
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git push -u origin master
+Counting objects: 60, done.
+Delta compression using up to 8 threads.
+Compressing objects:   2% (1/50)   Compressing objects:   4% (2/50)   Compressing objects:   6% (3/50)   Compressing objects:   8% (4/50)   Compressing objects:  10% (5/50)   Compressing objects:  12% (6/50)   Compressing objects:  14% (7/50)   Compressing objects:  16% (8/50)   Compressing objects:  18% (9/50)   Compressing objects:  20% (10/50)   Compressing objects:  22% (11/50)   Compressing objects:  24% (12/50)   Compressing objects:  26% (13/50)   Compressing objects:  28% (14/50)   Compressing objects:  30% (15/50)   Compressing objects:  32% (16/50)   Compressing objects:  34% (17/50)   Compressing objects:  36% (18/50)   Compressing objects:  38% (19/50)   Compressing objects:  40% (20/50)   Compressing objects:  42% (21/50)   Compressing objects:  44% (22/50)   Compressing objects:  46% (23/50)   Compressing objects:  48% (24/50)   Compressing objects:  50% (25/50)   Compressing objects:  52% (26/50)   Compressing objects:  54% (27/50)   Compressing objects:  56% (28/50)   Compressing objects:  58% (29/50)   Compressing objects:  60% (30/50)   Compressing objects:  62% (31/50)   Compressing objects:  64% (32/50)   Compressing objects:  66% (33/50)   Compressing objects:  68% (34/50)   Compressing objects:  70% (35/50)   Compressing objects:  72% (36/50)   Compressing objects:  74% (37/50)   Compressing objects:  76% (38/50)   Compressing objects:  78% (39/50)   Compressing objects:  80% (40/50)   Compressing objects:  82% (41/50)   Compressing objects:  84% (42/50)   Compressing objects:  86% (43/50)   Compressing objects:  88% (44/50)   Compressing objects:  90% (45/50)   Compressing objects:  92% (46/50)   Compressing objects:  94% (47/50)   Compressing objects:  96% (48/50)   Compressing objects:  98% (49/50)   Compressing objects: 100% (50/50)   Compressing objects: 100% (50/50), done.
+Writing objects:   1% (1/60)   Writing objects:   3% (2/60)   Writing objects:   8% (5/60)   Writing objects:  10% (6/60)   Writing objects:  11% (7/60)   Writing objects:  13% (8/60)   Writing objects:  15% (9/60)   Writing objects:  16% (10/60)   Writing objects:  18% (11/60)   Writing objects:  20% (12/60)   Writing objects:  21% (13/60)   Writing objects:  23% (14/60)   Writing objects:  25% (15/60)   Writing objects:  26% (16/60)   Writing objects:  28% (17/60)   Writing objects:  30% (18/60)   Writing objects:  31% (19/60)   Writing objects:  33% (20/60)   Writing objects:  35% (21/60)   Writing objects:  36% (22/60)   Writing objects:  38% (23/60)   Writing objects:  40% (24/60)   Writing objects:  41% (25/60)   Writing objects:  43% (26/60)   Writing objects:  45% (27/60)   Writing objects:  46% (28/60)   Writing objects:  48% (29/60)   Writing objects:  50% (30/60)   Writing objects:  51% (31/60)   Writing objects:  53% (32/60)   Writing objects:  55% (33/60)   Writing objects:  56% (34/60)   Writing objects:  60% (36/60)   Writing objects:  61% (37/60)   Writing objects:  63% (38/60)   Writing objects:  65% (39/60)   Writing objects:  66% (40/60)   Writing objects:  68% (41/60)   Writing objects:  70% (42/60)   Writing objects:  71% (43/60)   Writing objects:  73% (44/60)   Writing objects:  75% (45/60)   Writing objects:  76% (46/60)   Writing objects:  78% (47/60)   Writing objects:  80% (48/60)   Writing objects:  81% (49/60)   Writing objects:  83% (50/60)   Writing objects:  85% (51/60)   Writing objects:  86% (52/60)   Writing objects:  88% (53/60)   Writing objects:  90% (54/60)   Writing objects:  91% (55/60)   Writing objects:  93% (56/60)   Writing objects:  95% (57/60)   Writing objects:  96% (58/60)   Writing objects:  98% (59/60)   Writing objects: 100% (60/60)   Writing objects: 100% (60/60), 16.86 KiB | 0 bytes/s, done.
+Total 60 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), done.[K
+To https://github.com/andrewhaoyu/Utility.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+]0;~/GoogleDrive/project/Ni/Utility[?1034hNCI-02034757-ML:Utility zhangh24$ library(devtools)
+bash: syntax error near unexpected token `devtools'
+  mu.2 = mu.2/max(mu.2, xi)
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$   xi.2 = xi/max(mu,xi)
+bash: syntax error near unexpected token `('
+git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .DS_Store[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186.env[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/C489B8A4/cpp-complilation-config[m
+	[31mmodified:   .Rproj.user/C489B8A4/cpp-definition-cache[m
+	[31mmodified:   .Rproj.user/C489B8A4/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/C489B8A4/pcs/workbench-pane.pper[m
+	[31mmodified:   .Rproj.user/C489B8A4/persistent-state[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/175431F6[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/7C62039A[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/97FA1D0D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/F2284652[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/FE5B821D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/INDEX[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/3386E334[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/3386E334-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/4E9E1C8D-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/62677F9A[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/62677F9A-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/63B449B0-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/7DFF3534[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/7DFF3534-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/810C08D1[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/810C08D1-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/82FB9929-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/865F0913[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/865F0913-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/9C53B810[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/9C53B810-contents[m
+	[31mdeleted:    .Rproj.user/C489B8A4/sources/s-78E9CD8B/lock_file[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   DESCRIPTION[m
+	[31mmodified:   NAMESPACE[m
+	[31mmodified:   R/tAKA.R[m
+	[31mmodified:   Utility.Rproj[m
+	[31mdeleted:    man/tAKA.Rd[m
+	[31mmodified:   src/Utility.so[m
+	[31mmodified:   src/tAKA.c[m
+	[31mmodified:   src/tAKA.o[m
+	[31mmodified:   test/test.R[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m.gitignore[m
+	[31mR/RcppExports.R[m
+	[31mR/getp_au1.R[m
+	[31mR/getp_aud_estimate_pi_first.R[m
+	[31mR/omniRLRT.R[m
+	[31mR/omniRLRT_fast.R[m
+	[31mR/support.R[m
+	[31mR/try.R[m
+	[31mRstudio_tip.Rmd[m
+	[31mRstudio_tip.html[m
+	[31minst.zip[m
+	[31mman/AKA_C.Rd[m
+	[31mman/Eigen_C.Rd[m
+	[31mman/Eigen_C_value.Rd[m
+	[31mman/getp_au1.Rd[m
+	[31mman/getp_aud_estimate_pi_first.Rd[m
+	[31mman/omniRLRT.Rd[m
+	[31mman/omniRLRT_fast.Rd[m
+	[31msrc/RcppExports.cpp[m
+	[31msrc/fastEgen_RC.cpp[m
+	[31msrc/tAKA_RC.cpp[m
+	[31mtest/example.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git add[K[K[K[K[K[K[Kgit ads[K[K[Kadd -A

@@ -1,5 +1,0 @@
-all: $(SHLIB)
-
-PKG_CFLAGS=-Wno-unused-function
-
-tAKA.o: tAKA.c

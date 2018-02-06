@@ -2,6 +2,30 @@
     {
         "definitions" : [
             {
+                "column" : 6,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 16,
+                "name" : "Eigen_C(NumericMatrix)",
+                "parent_name" : "",
+                "usr" : "c:@F@Eigen_C#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 17,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 28,
+                "name" : "Eigen_C_value(NumericMatrix)",
+                "parent_name" : "",
+                "usr" : "c:@F@Eigen_C_value#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            }
+        ],
+        "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+        "file_last_write" : 1517897654
+    },
+    {
+        "definitions" : [
+            {
                 "column" : 13,
                 "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
                 "kind" : 6,
@@ -132,12 +156,27 @@
                 "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
                 "kind" : 6,
                 "line" : 249,
-                "name" : "TAKA(double *, double *, int *, int *, double *)",
+                "name" : "tAKA(double *, double *, int *, int *, double *)",
                 "parent_name" : "",
-                "usr" : "c:@F@TAKA"
+                "usr" : "c:@F@tAKA"
             }
         ],
         "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA.c",
-        "file_last_write" : 1517262081
+        "file_last_write" : 1517351861
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 21,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA_RC.cpp",
+                "kind" : 6,
+                "line" : 7,
+                "name" : "tAKA_RC(NumericMatrix, NumericMatrix)",
+                "parent_name" : "",
+                "usr" : "c:@F@tAKA_RC#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#"
+            }
+        ],
+        "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/tAKA_RC.cpp",
+        "file_last_write" : 1517436012
     }
 ]

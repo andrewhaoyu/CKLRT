@@ -222,7 +222,7 @@ int Nparm;
 /*end fill_Info*/
 
 
-    /* Function for quadractic computation X^tkX */
+/* Function for quadractic computation X^tkX */
 static void QuadXKX(double **X,double ** K, int Xnr,int Xnc, double** ret){
   double sum = 0.0;
 
@@ -246,23 +246,26 @@ static void QuadXKX(double **X,double ** K, int Xnr,int Xnc, double** ret){
   }
 }
 
-void TAKA(double * AV, double* KV, int *pArow,int *pAcol, double * outV){
-double **A;
+void tAKA(double * AV, double* KV, int *pArow,int *pAcol, double * outV){
+  double **A;
   double ** K;
   double ** out;
   int Arow = *pArow;
   int Acol = *pAcol;
-  Rprintf("Allocate memory\n");
-A = dMat_alloc(Arow,Acol,0,0.0);
-K = dMat_alloc(Arow,Arow,0,0.0);
-out = dMat_alloc(Acol,Acol,0,0.0);
-fillMat(AV,Arow,Acol,0,A);
-fillMat(KV,Acol,Acol,0,K);
-Rprintf("Compute\n");
-QuadXKX(A,K,Arow,Acol,out);
-fill_Info(out,outV,Acol);
-matrix_free((void **)A, Arow);
-matrix_free((void **)K, Arow);
-matrix_free((void **)out,Acol);
-return;
+  /*Rprintf("Allocate memory\n");*/
+  A = dMat_alloc(Arow,Acol,0,0.0);
+  K = dMat_alloc(Arow,Arow,0,0.0);
+  out = dMat_alloc(Acol,Acol,0,0.0);
+  fillMat(AV,Arow,Acol,0,A);
+  /*print_dMat(A, Arow, Acol, "A");*/
+  fillMat(KV,Arow,Arow,0,K);
+  /*print_dMat(K, Arow, Arow, "K");*/
+  /*Rprintf("Compute\n");*/
+  QuadXKX(A,K,Arow,Acol,out);
+  /*print_dMat(out, Acol, Acol, "out");*/
+  fill_Info(out,outV,Acol);
+  matrix_free((void **)A, Arow);
+  matrix_free((void **)K, Arow);
+  matrix_free((void **)out,Acol);
+  return;
 }
