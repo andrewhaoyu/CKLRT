@@ -156,21 +156,17 @@ BEGIN_RCPP
 END_RCPP
 }
 // LR0_fixRho_C
-/*NumericMatrix LR0_fixRho_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericVector w2R, int nminuspx)*/ NumericVector LR0_fixRho_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericVector w2R, int nminuspx);
-RcppExport SEXP _Utility_LR0_fixRho_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP) {
+NumericVector LR0_fixRho_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericMatrix w2R, int nminuspx);
+RcppExport SEXP _Utility_LR0_fixRho_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< NumericVector >::type LamdasR(LamdasRSEXP);
     Rcpp::traits::input_parameter< NumericVector >::type muR(muRSEXP);
     Rcpp::traits::input_parameter< NumericMatrix >::type w1R(w1RSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type w2R(w2RSEXP);
-    Rcpp::traits::input_parameter< int nminuspx)*/ NumericVector LR0_fixRho_C(NumericVector >::type LamdasR(LamdasRSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type muR(muRSEXP);
-    Rcpp::traits::input_parameter< NumericMatrix >::type w1R(w1RSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type w2R(w2RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type w2R(w2RSEXP);
     Rcpp::traits::input_parameter< int >::type nminuspx(nminuspxSEXP);
-    rcpp_result_gen = Rcpp::wrap(LR0_fixRho_C(LamdasR, muR, w1R, w2R, LamdasR, muR, w1R, w2R, nminuspx));
+    rcpp_result_gen = Rcpp::wrap(LR0_fixRho_C(LamdasR, muR, w1R, w2R, nminuspx));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -203,7 +199,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_Utility_ifelsetest_C", (DL_FUNC) &_Utility_ifelsetest_C, 1},
     {"_Utility_MatrixPlus_C", (DL_FUNC) &_Utility_MatrixPlus_C, 2},
     {"_Utility_NumxMatrix_C", (DL_FUNC) &_Utility_NumxMatrix_C, 2},
-    {"_Utility_LR0_fixRho_C", (DL_FUNC) &_Utility_LR0_fixRho_C, 9},
+    {"_Utility_LR0_fixRho_C", (DL_FUNC) &_Utility_LR0_fixRho_C, 5},
     {"_Utility_tAKA_RC", (DL_FUNC) &_Utility_tAKA_RC, 2},
     {"tAKA", (DL_FUNC) &tAKA, 5},
     {NULL, NULL, 0}

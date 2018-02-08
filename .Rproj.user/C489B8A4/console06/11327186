@@ -609,3 +609,86 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git add -A
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git commit -m "rcpp"
+[master 4cf109b] rcpp
+ 20 files changed, 390 insertions(+), 29 deletions(-)
+ rewrite .Rproj.user/C489B8A4/persistent-state (83%)
+ create mode 100644 man/LR0_fixRho_C.Rd
+ create mode 100644 man/Vecplus_C.Rd
+ create mode 100644 man/ifelsetest_C.Rd
+ rewrite src/Utility.so (69%)
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git push
+Counting objects: 32, done.
+Delta compression using up to 8 threads.
+Compressing objects:   3% (1/30)   Compressing objects:   6% (2/30)   Compressing objects:  10% (3/30)   Compressing objects:  13% (4/30)   Compressing objects:  16% (5/30)   Compressing objects:  20% (6/30)   Compressing objects:  23% (7/30)   Compressing objects:  26% (8/30)   Compressing objects:  30% (9/30)   Compressing objects:  33% (10/30)   Compressing objects:  36% (11/30)   Compressing objects:  40% (12/30)   Compressing objects:  43% (13/30)   Compressing objects:  46% (14/30)   Compressing objects:  50% (15/30)   Compressing objects:  53% (16/30)   Compressing objects:  56% (17/30)   Compressing objects:  60% (18/30)   Compressing objects:  63% (19/30)   Compressing objects:  66% (20/30)   Compressing objects:  70% (21/30)   Compressing objects:  73% (22/30)   Compressing objects:  76% (23/30)   Compressing objects:  80% (24/30)   Compressing objects:  83% (25/30)   Compressing objects:  86% (26/30)   Compressing objects:  90% (27/30)   Compressing objects:  93% (28/30)   Compressing objects:  96% (29/30)   Compressing objects: 100% (30/30)   Compressing objects: 100% (30/30), done.
+Writing objects:   3% (1/32)   Writing objects:   6% (2/32)   Writing objects:   9% (3/32)   Writing objects:  12% (4/32)   Writing objects:  15% (5/32)   Writing objects:  18% (6/32)   Writing objects:  21% (7/32)   Writing objects:  25% (8/32)   Writing objects:  28% (9/32)   Writing objects:  31% (10/32)   Writing objects:  34% (11/32)   Writing objects:  37% (12/32)   Writing objects:  40% (13/32)   Writing objects:  43% (14/32)   Writing objects:  46% (15/32)   Writing objects:  50% (16/32)   Writing objects:  53% (17/32)   Writing objects:  56% (18/32)   Writing objects:  59% (19/32)   Writing objects:  62% (20/32)   Writing objects:  65% (21/32)   Writing objects:  68% (22/32)   Writing objects:  71% (23/32)   Writing objects:  75% (24/32)   Writing objects:  78% (25/32)   Writing objects:  81% (26/32)   Writing objects:  84% (27/32)   Writing objects:  87% (28/32)   Writing objects:  90% (29/32)   Writing objects:  93% (30/32)   Writing objects:  96% (31/32)   Writing objects: 100% (32/32)   Writing objects: 100% (32/32), 43.75 KiB | 0 bytes/s, done.
+Total 32 (delta 20), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/20)   [Kremote: Resolving deltas:   5% (1/20)   [Kremote: Resolving deltas:  10% (2/20)   [Kremote: Resolving deltas:  15% (3/20)   [Kremote: Resolving deltas:  20% (4/20)   [Kremote: Resolving deltas:  25% (5/20)   [Kremote: Resolving deltas:  30% (6/20)   [Kremote: Resolving deltas:  35% (7/20)   [Kremote: Resolving deltas:  40% (8/20)   [Kremote: Resolving deltas:  45% (9/20)   [Kremote: Resolving deltas:  50% (10/20)   [Kremote: Resolving deltas:  55% (11/20)   [Kremote: Resolving deltas:  60% (12/20)   [Kremote: Resolving deltas:  65% (13/20)   [Kremote: Resolving deltas:  70% (14/20)   [Kremote: Resolving deltas:  75% (15/20)   [Kremote: Resolving deltas:  80% (16/20)   [Kremote: Resolving deltas:  85% (17/20)   [Kremote: Resolving deltas:  90% (18/20)   [Kremote: Resolving deltas:  95% (19/20)   [Kremote: Resolving deltas: 100% (20/20)   [Kremote: Resolving deltas: 100% (20/20), completed with 20 local objects.[K
+To https://github.com/andrewhaoyu/Utility.git
+   93757fc..4cf109b  master -> master
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ ]0;~/GoogleDrive/project/Ni/Utility[?1034hNCI-02034757-ML:Utility zhangh24$ try(library(mgcv)) ; try (library(MASS)); library(nlme);
+bash: syntax error near unexpected token `library'
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ library(compiler);librar y(Rcpp);library(RcppEigen)
+bash: syntax error near unexpected token `compiler'
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ 
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ n = 100
+bash: n: command not found
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ X = rnorm(n)
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ 
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ p = 2
+bash: p: command not found
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ G = runif(n*p)< 0.5
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ G = G + runif(n*p) < 0.5 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K5
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ G = matrix(G, n,p)
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ E = (runif(n) < 0.5)^2
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ y = rnorm(n) + G[,1] * 0 .3
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ 
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ time1 <- proc.time()
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ omniRLRT(y, X = cbind(X,  E),K1 = G %*% t(G), K2 = (G*E) %*% t(G * E) , N = 10000,  length.rho = 200, length.lambda = 21)
+bash: syntax error near unexpected token `y,'
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ time1 <- proc.time()-tim e1
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ time2 <- proc.time()
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ omniRLRT_fast(y, X = cbi nd(X, E),K1 = G %*% t(G), K2 = (G*E) %*% t(G * E) , N = 10 000, length.rho = 200, length.lambda = 21)
+bash: syntax error near unexpected token `y,'
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ time2 <- proc.time()-tim e2
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ print(time1)
+bash: syntax error near unexpected token `time1'
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ print(time2)
+bash: syntax error near unexpected token `time2'
+git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .DS_Store[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186.env[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/C489B8A4/cpp-definition-cache[m
+	[31mmodified:   .Rproj.user/C489B8A4/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/C489B8A4/pcs/windowlayoutstate.pper[m
+	[31mmodified:   .Rproj.user/C489B8A4/persistent-state[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/97FA1D0D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/FE5B821D[m
+	[31mmodified:   R/RcppExports.R[m
+	[31mmodified:   R/omniRLRT_fast.R[m
+	[31mmodified:   src/RcppExports.cpp[m
+	[31mmodified:   src/Utility.so[m
+	[31mmodified:   src/fastEgen_RC.cpp[m
+	[31mmodified:   test/example.R[m
+	[31mmodified:   test/testC.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git add -A

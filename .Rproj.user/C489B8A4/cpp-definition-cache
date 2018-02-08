@@ -131,14 +131,14 @@
                 "column" : 15,
                 "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
                 "kind" : 6,
-                "line" : 166,
-                "name" : "LR0_fixRho_C(NumericVector, NumericVector, NumericMatrix, NumericVector, int)",
+                "line" : 165,
+                "name" : "LR0_fixRho_C(NumericVector, NumericVector, NumericMatrix, NumericMatrix, int)",
                 "parent_name" : "",
-                "usr" : "c:@F@LR0_fixRho_C#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#I#"
+                "usr" : "c:@F@LR0_fixRho_C#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S1_#I#"
             }
         ],
         "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
-        "file_last_write" : 1518070399
+        "file_last_write" : 1518073415
     },
     {
         "definitions" : [

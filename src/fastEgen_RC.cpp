@@ -154,7 +154,6 @@ SEXP NumxMatrix_C(double A, Eigen::MatrixXd B){
   return Rcpp::wrap(C);
 }
 
-
 //' LR0_fixRho_C
 //' @param LamdasR Lamda Number
 //' @param muR mu vector
@@ -163,19 +162,13 @@ SEXP NumxMatrix_C(double A, Eigen::MatrixXd B){
 //' @param nminuspx n-px
 //' @export
 // [[Rcpp::export]]
-/*NumericMatrix LR0_fixRho_C(NumericVector LamdasR,
-             NumericVector muR,
-             NumericMatrix w1R,
-             NumericVector w2R,
-             int nminuspx)*/
 NumericVector LR0_fixRho_C(NumericVector LamdasR,
                            NumericVector muR,
                            NumericMatrix w1R,
-                           NumericVector w2R,
-                           int nminuspx)
-  {
+                           NumericMatrix w2R,
+                           int nminuspx){
   const Map<MatrixXd> w1(as<Map<MatrixXd> >(w1R));
-  const Map<VectorXd> w2(as<Map<VectorXd> >(w2R));
+  const Map<MatrixXd> w2(as<Map<MatrixXd> >(w2R));
   const Map<VectorXd> mu(as<Map<VectorXd> >(muR));
   const Map<VectorXd> Lamdas(as<Map<VectorXd> >(LamdasR));
   int length_lamda = Lamdas.size();
@@ -185,24 +178,24 @@ NumericVector LR0_fixRho_C(NumericVector LamdasR,
   Eigen::VectorXd lammu_case;
   Eigen::VectorXd Dn;
   Eigen::VectorXd Nn;
+  Eigen::VectorXd DnonNn;
   NumericVector temp;
   NumericMatrix result(N,length_lamda);
-  int i = 0;
-  /*for(int i=0;i<length_lamda;i++){*/
-    lam = Lamdas[i];
-    lammu_con = 1/(lam*mu).array();
-    lammu_case = 1- lammu_con.array();
-    Dn = (lammu_con).transpose()*w1+w2;
-    Nn = lammu_case*w1;
-    temp = nminuspx*(1+Nn.array()/Dn.array()).log()-
-      (1+lam*mu.array()).log().sum();
-    /*result(_,i) = ifelsetest_C(temp);*/
-  /*}*/
-  return Rcpp::wrap(ifelsetest_C(temp));
-}
 
-/* calculate t(A)KA*/
-  /* this function computes everything in through elementwise style*/
-  /* seems very slow in Rcpp syxtax */
-  /* works well in C*/
+
+  for(int i=0;i<length_lamda;i++){
+  lam = Lamdas[i];
+  lammu_con = 1/(1+lam*mu.array());
+  lammu_case = 1- lammu_con.array();
+  Dn = (lammu_con).transpose()*w1+w2;
+
+  Nn = lammu_case.transpose()*w1;
+  temp = nminuspx*(1+Nn.array()/Dn.array()).log()-
+    (1+(lam*mu).array()).log().sum();
+
+  result(_,i) = ifelsetest_C(temp);
+  }
+  return Rcpp::wrap(result);
+
+}
 

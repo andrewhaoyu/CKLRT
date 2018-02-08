@@ -105,8 +105,8 @@ NumxMatrix_C <- function(A, B) {
 #' @param w2R w2 vector
 #' @param nminuspx n-px
 #' @export
-LR0_fixRho_C <- function(LamdasR, muR, w1R, w2R, LamdasR, muR, w1R, w2R, nminuspx) {
-    .Call('_Utility_LR0_fixRho_C', PACKAGE = 'Utility', LamdasR, muR, w1R, w2R, LamdasR, muR, w1R, w2R, nminuspx)
+LR0_fixRho_C <- function(LamdasR, muR, w1R, w2R, nminuspx) {
+    .Call('_Utility_LR0_fixRho_C', PACKAGE = 'Utility', LamdasR, muR, w1R, w2R, nminuspx)
 }
 
 tAKA_RC <- function(A, K) {
