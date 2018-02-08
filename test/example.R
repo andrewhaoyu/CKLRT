@@ -1,7 +1,9 @@
+library(devtools)
+install_github("andrewhaoyu/Utility")
 try(library(mgcv)) ; try(library(MASS)); library(nlme);
 library(compiler);library(Rcpp);library(RcppEigen)
-
-n = 100
+library(Utility)
+n = 1000
 X = rnorm(n)
 
 p = 2
