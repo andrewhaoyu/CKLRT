@@ -116,8 +116,57 @@ microbenchmark(
 )
 
 
+###test ifelsetest_C
+a <- rnorm(100)
+result1 <- ifelse(a<0,0,a)
+result2 <- ifelsetest_C(a)
+all.equal(result1,result2)
+microbenchmark(
+  ifelse(a<0,0,a),
+  ifelsetest_C(a)
+)
 
-####
+### Vecplus_C
+a <- rnorm(10000)
+b <- rnorm(10000)
+result1 <- a+b
+result2 <- Vecplus_C(a,b)
+all.equal(result1,result2)
+microbenchmark(
+  a+b,
+  Vecplus_C(a,b)
+)
+
+
+
+
+
+Lambdas.test <- Lambdas
+mu.test <- mu
+w1.test <- w1
+w2.test <- w2
+nminuspx <- n-px
+
+
+result1 <- LR0_fixRho_C(Lambdas.test,
+                        mu.test ,
+             w1.test,
+             w2.test,
+             nminuspx)
+
+result2 <-  LR0_fixRho
+for (i in 1:length.lambda){
+  lam = Lambdas.test[i]
+  lammu.con <- 1/(1 + lam*mu.test)
+  lammu.case <- 1-lammu.con
+  Dn = (lammu.con)%*%w1.test+ w2.test
+  Nn = (lammu.case)%*%w1.test
+  temp = (n-px)*log(1 + Nn/Dn) - Sum_C(log(1 + lam*mu.test))
+  result2[,i] = ifelsetest_C(temp)
+}
+
+all.equal(result1,result2)
+
 a = rnorm(1)
 b <- rnorm(4)
 ww = matrix(rnorm(4*10000),4,10000)

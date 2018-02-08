@@ -59,12 +59,27 @@ VecMultMat_C <- function(A, B) {
     .Call('_Utility_VecMultMat_C', PACKAGE = 'Utility', A, B)
 }
 
+#' Vecplus_C
+#' @param A Vector
+#' @param B Vector
+#' @export
+Vecplus_C <- function(A, B) {
+    .Call('_Utility_Vecplus_C', PACKAGE = 'Utility', A, B)
+}
+
 #' ColSumtwomatrix_C
 #' @param AA Matrix
 #' @param BB Matrix
 #' @export
 ColSumtwomatrix_C <- function(AA, BB) {
     .Call('_Utility_ColSumtwomatrix_C', PACKAGE = 'Utility', AA, BB)
+}
+
+#' ifelsetest_C
+#' @param x Vector
+#' @export
+ifelsetest_C <- function(x) {
+    .Call('_Utility_ifelsetest_C', PACKAGE = 'Utility', x)
 }
 
 #' MatrixPlus_C
@@ -81,6 +96,17 @@ MatrixPlus_C <- function(A, B) {
 #' @export
 NumxMatrix_C <- function(A, B) {
     .Call('_Utility_NumxMatrix_C', PACKAGE = 'Utility', A, B)
+}
+
+#' LR0_fixRho_C
+#' @param LamdasR Lamda Number
+#' @param muR mu vector
+#' @param w1R w1 vector
+#' @param w2R w2 vector
+#' @param nminuspx n-px
+#' @export
+LR0_fixRho_C <- function(LamdasR, muR, w1R, w2R, LamdasR, muR, w1R, w2R, nminuspx) {
+    .Call('_Utility_LR0_fixRho_C', PACKAGE = 'Utility', LamdasR, muR, w1R, w2R, LamdasR, muR, w1R, w2R, nminuspx)
 }
 
 tAKA_RC <- function(A, K) {

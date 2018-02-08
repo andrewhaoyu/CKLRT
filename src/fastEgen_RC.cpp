@@ -96,12 +96,20 @@ NumericVector Elementwisesquare_C(NumericMatrix AA){
 //' @param B Matrix
 //' @export
 // [[Rcpp::export]]
-SEXP VecMultMat_C(Eigen::VectorXd A,Eigen::MatrixXd  B){
+NumericVector VecMultMat_C(Eigen::VectorXd A,Eigen::MatrixXd  B){
   Eigen::VectorXd C = A.transpose()*B;
   return Rcpp::wrap(C);
 }
 
-
+//' Vecplus_C
+//' @param A Vector
+//' @param B Vector
+//' @export
+// [[Rcpp::export]]
+NumericVector Vecplus_C(Eigen::VectorXd A,Eigen::VectorXd B){
+  Eigen::VectorXd C = A+B;
+  return Rcpp::wrap(C);
+}
 
 
 //' ColSumtwomatrix_C
@@ -115,7 +123,13 @@ NumericVector ColSumtwomatrix_C(NumericMatrix AA,NumericMatrix BB){
   return result;
 }
 
-
+//' ifelsetest_C
+//' @param x Vector
+//' @export
+//[[Rcpp::export]]
+NumericVector ifelsetest_C( NumericVector x){
+  return Rcpp::wrap( ifelse( x < 0, 0, x ));
+}
 
 
 
@@ -138,6 +152,53 @@ SEXP MatrixPlus_C(Eigen::MatrixXd A, Eigen::MatrixXd B){
 SEXP NumxMatrix_C(double A, Eigen::MatrixXd B){
   Eigen::MatrixXd C = A * B;
   return Rcpp::wrap(C);
+}
+
+
+//' LR0_fixRho_C
+//' @param LamdasR Lamda Number
+//' @param muR mu vector
+//' @param w1R w1 vector
+//' @param w2R w2 vector
+//' @param nminuspx n-px
+//' @export
+// [[Rcpp::export]]
+/*NumericMatrix LR0_fixRho_C(NumericVector LamdasR,
+             NumericVector muR,
+             NumericMatrix w1R,
+             NumericVector w2R,
+             int nminuspx)*/
+NumericVector LR0_fixRho_C(NumericVector LamdasR,
+                           NumericVector muR,
+                           NumericMatrix w1R,
+                           NumericVector w2R,
+                           int nminuspx)
+  {
+  const Map<MatrixXd> w1(as<Map<MatrixXd> >(w1R));
+  const Map<VectorXd> w2(as<Map<VectorXd> >(w2R));
+  const Map<VectorXd> mu(as<Map<VectorXd> >(muR));
+  const Map<VectorXd> Lamdas(as<Map<VectorXd> >(LamdasR));
+  int length_lamda = Lamdas.size();
+  int N = w2.size();
+  double lam;
+  Eigen::VectorXd lammu_con;
+  Eigen::VectorXd lammu_case;
+  Eigen::VectorXd Dn;
+  Eigen::VectorXd Nn;
+  NumericVector temp;
+  NumericMatrix result(N,length_lamda);
+  int i = 0;
+  /*for(int i=0;i<length_lamda;i++){*/
+    lam = Lamdas[i];
+    lammu_con = 1/(lam*mu).array();
+    lammu_case = 1- lammu_con.array();
+    Dn = (lammu_con).transpose()*w1+w2;
+    Nn = lammu_case*w1;
+    temp = nminuspx*(1+Nn.array()/Dn.array()).log()-
+      (1+lam*mu.array()).log().sum();
+    /*result(_,i) = ifelsetest_C(temp);*/
+  /*}*/
+  return Rcpp::wrap(ifelsetest_C(temp));
 }
 
 /* calculate t(A)KA*/

@@ -129,10 +129,12 @@ omniRLRT_fast = function(y, X,K1, K2, N = 10000, length.rho = 200, length.lambda
 
       for (i in 1:length.lambda){
         lam = Lambdas[i]
-        Dn = (1/(1 + lam*mu))%*%w1+ w2
-        Nn = (lam*mu/(1 + lam*mu))%*%w1
+        lammu.con <- 1/(1 + lam*mu)
+        lammu.case <- 1-lammu.con
+        Dn = (lammu.con)%*%w1+ w2
+        Nn = (lammu.case)%*%w1
         temp = (n-px)*log(1 + Nn/Dn) - Sum_C(log(1 + lam*mu))
-        LR0_fixRho[,i] = ifelse(temp < 0, 0, temp)
+        LR0_fixRho[,i] = ifelsetest_C(temp)
       }
       LR0_allRho[,j] = MatrixRowMax_C(LR0_fixRho)
     }

@@ -85,7 +85,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // VecMultMat_C
-SEXP VecMultMat_C(Eigen::VectorXd A, Eigen::MatrixXd B);
+NumericVector VecMultMat_C(Eigen::VectorXd A, Eigen::MatrixXd B);
 RcppExport SEXP _Utility_VecMultMat_C(SEXP ASEXP, SEXP BSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
@@ -93,6 +93,18 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Eigen::VectorXd >::type A(ASEXP);
     Rcpp::traits::input_parameter< Eigen::MatrixXd >::type B(BSEXP);
     rcpp_result_gen = Rcpp::wrap(VecMultMat_C(A, B));
+    return rcpp_result_gen;
+END_RCPP
+}
+// Vecplus_C
+NumericVector Vecplus_C(Eigen::VectorXd A, Eigen::VectorXd B);
+RcppExport SEXP _Utility_Vecplus_C(SEXP ASEXP, SEXP BSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Eigen::VectorXd >::type A(ASEXP);
+    Rcpp::traits::input_parameter< Eigen::VectorXd >::type B(BSEXP);
+    rcpp_result_gen = Rcpp::wrap(Vecplus_C(A, B));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -105,6 +117,17 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< NumericMatrix >::type AA(AASEXP);
     Rcpp::traits::input_parameter< NumericMatrix >::type BB(BBSEXP);
     rcpp_result_gen = Rcpp::wrap(ColSumtwomatrix_C(AA, BB));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ifelsetest_C
+NumericVector ifelsetest_C(NumericVector x);
+RcppExport SEXP _Utility_ifelsetest_C(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(ifelsetest_C(x));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -132,6 +155,25 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// LR0_fixRho_C
+/*NumericMatrix LR0_fixRho_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericVector w2R, int nminuspx)*/ NumericVector LR0_fixRho_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericVector w2R, int nminuspx);
+RcppExport SEXP _Utility_LR0_fixRho_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type LamdasR(LamdasRSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type muR(muRSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type w1R(w1RSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type w2R(w2RSEXP);
+    Rcpp::traits::input_parameter< int nminuspx)*/ NumericVector LR0_fixRho_C(NumericVector >::type LamdasR(LamdasRSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type muR(muRSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type w1R(w1RSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type w2R(w2RSEXP);
+    Rcpp::traits::input_parameter< int >::type nminuspx(nminuspxSEXP);
+    rcpp_result_gen = Rcpp::wrap(LR0_fixRho_C(LamdasR, muR, w1R, w2R, LamdasR, muR, w1R, w2R, nminuspx));
+    return rcpp_result_gen;
+END_RCPP
+}
 // tAKA_RC
 Rcpp::NumericMatrix tAKA_RC(NumericMatrix A, NumericMatrix K);
 RcppExport SEXP _Utility_tAKA_RC(SEXP ASEXP, SEXP KSEXP) {
@@ -156,9 +198,12 @@ static const R_CallMethodDef CallEntries[] = {
     {"_Utility_MatrixRowMax_C", (DL_FUNC) &_Utility_MatrixRowMax_C, 1},
     {"_Utility_Elementwisesquare_C", (DL_FUNC) &_Utility_Elementwisesquare_C, 1},
     {"_Utility_VecMultMat_C", (DL_FUNC) &_Utility_VecMultMat_C, 2},
+    {"_Utility_Vecplus_C", (DL_FUNC) &_Utility_Vecplus_C, 2},
     {"_Utility_ColSumtwomatrix_C", (DL_FUNC) &_Utility_ColSumtwomatrix_C, 2},
+    {"_Utility_ifelsetest_C", (DL_FUNC) &_Utility_ifelsetest_C, 1},
     {"_Utility_MatrixPlus_C", (DL_FUNC) &_Utility_MatrixPlus_C, 2},
     {"_Utility_NumxMatrix_C", (DL_FUNC) &_Utility_NumxMatrix_C, 2},
+    {"_Utility_LR0_fixRho_C", (DL_FUNC) &_Utility_LR0_fixRho_C, 9},
     {"_Utility_tAKA_RC", (DL_FUNC) &_Utility_tAKA_RC, 2},
     {"tAKA", (DL_FUNC) &tAKA, 5},
     {NULL, NULL, 0}
