@@ -2,10 +2,19 @@
     {
         "definitions" : [
             {
+                "column" : 25,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 8,
+                "line" : 10,
+                "name" : "MapVecd",
+                "parent_name" : "",
+                "usr" : "c:fastEgen_RC.cpp@T@MapVecd"
+            },
+            {
                 "column" : 6,
                 "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
                 "kind" : 6,
-                "line" : 16,
+                "line" : 17,
                 "name" : "Eigen_C(NumericMatrix)",
                 "parent_name" : "",
                 "usr" : "c:@F@Eigen_C#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
@@ -14,14 +23,95 @@
                 "column" : 17,
                 "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
                 "kind" : 6,
-                "line" : 28,
+                "line" : 29,
                 "name" : "Eigen_C_value(NumericMatrix)",
                 "parent_name" : "",
                 "usr" : "c:@F@Eigen_C_value#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 6,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 40,
+                "name" : "MatMult_C(Eigen::MatrixXd, Eigen::MatrixXd)",
+                "parent_name" : "",
+                "usr" : "c:@F@MatMult_C#$@N@Eigen@C@Matrix>#d#VI-1#VI-1#VI0#VI-1#VI-1#S0_#"
+            },
+            {
+                "column" : 8,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 50,
+                "name" : "Sum_C(NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@Sum_C#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 15,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 60,
+                "name" : "ColSum_C(NumericMatrix)",
+                "parent_name" : "",
+                "usr" : "c:@F@ColSum_C#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 15,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 71,
+                "name" : "MatrixRowMax_C(NumericMatrix)",
+                "parent_name" : "",
+                "usr" : "c:@F@MatrixRowMax_C#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 15,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 84,
+                "name" : "Elementwisesquare_C(NumericMatrix)",
+                "parent_name" : "",
+                "usr" : "c:@F@Elementwisesquare_C#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 6,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 99,
+                "name" : "VecMultMat_C(Eigen::VectorXd, Eigen::MatrixXd)",
+                "parent_name" : "",
+                "usr" : "c:@F@VecMultMat_C#$@N@Eigen@C@Matrix>#d#VI-1#VI1#VI0#VI-1#VI1#$@N@Eigen@C@Matrix>#d#VI-1#VI-1#VI0#VI-1#VI-1#"
+            },
+            {
+                "column" : 15,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 112,
+                "name" : "ColSumtwomatrix_C(NumericMatrix, NumericMatrix)",
+                "parent_name" : "",
+                "usr" : "c:@F@ColSumtwomatrix_C#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#"
+            },
+            {
+                "column" : 6,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 127,
+                "name" : "MatrixPlus_C(Eigen::MatrixXd, Eigen::MatrixXd)",
+                "parent_name" : "",
+                "usr" : "c:@F@MatrixPlus_C#$@N@Eigen@C@Matrix>#d#VI-1#VI-1#VI0#VI-1#VI-1#S0_#"
+            },
+            {
+                "column" : 6,
+                "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
+                "kind" : 6,
+                "line" : 138,
+                "name" : "NumxMatrix_C(double, Eigen::MatrixXd)",
+                "parent_name" : "",
+                "usr" : "c:@F@NumxMatrix_C#d#$@N@Eigen@C@Matrix>#d#VI-1#VI-1#VI0#VI-1#VI-1#"
             }
         ],
         "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
-        "file_last_write" : 1517897654
+        "file_last_write" : 1518051588
     },
     {
         "definitions" : [

@@ -15,6 +15,74 @@ Eigen_C_value <- function(As) {
     .Call('_Utility_Eigen_C_value', PACKAGE = 'Utility', As)
 }
 
+#' MatMult_C
+#' @param A first matrix
+#' @param B second matrix
+#' @export
+MatMult_C <- function(A, B) {
+    .Call('_Utility_MatMult_C', PACKAGE = 'Utility', A, B)
+}
+
+#' Sum_C
+#' @param AA Vector
+#' @export
+Sum_C <- function(AA) {
+    .Call('_Utility_Sum_C', PACKAGE = 'Utility', AA)
+}
+
+#' ColSum_C
+#' @param AA Matrix
+#' @export
+ColSum_C <- function(AA) {
+    .Call('_Utility_ColSum_C', PACKAGE = 'Utility', AA)
+}
+
+#' MatrixRowMax_C
+#' @param AA Matrix
+#' @export
+MatrixRowMax_C <- function(AA) {
+    .Call('_Utility_MatrixRowMax_C', PACKAGE = 'Utility', AA)
+}
+
+#' Elementwisesquare_C
+#' @param AA Matrix
+#' @export
+Elementwisesquare_C <- function(AA) {
+    .Call('_Utility_Elementwisesquare_C', PACKAGE = 'Utility', AA)
+}
+
+#' VecMultMat_C
+#' @param A Vector
+#' @param B Matrix
+#' @export
+VecMultMat_C <- function(A, B) {
+    .Call('_Utility_VecMultMat_C', PACKAGE = 'Utility', A, B)
+}
+
+#' ColSumtwomatrix_C
+#' @param AA Matrix
+#' @param BB Matrix
+#' @export
+ColSumtwomatrix_C <- function(AA, BB) {
+    .Call('_Utility_ColSumtwomatrix_C', PACKAGE = 'Utility', AA, BB)
+}
+
+#' MatrixPlus_C
+#' @param A First Matrix
+#' @param B Second Matrix
+#' @export
+MatrixPlus_C <- function(A, B) {
+    .Call('_Utility_MatrixPlus_C', PACKAGE = 'Utility', A, B)
+}
+
+#' NumxMatrix_C
+#' @param A Number
+#' @param B Matrix
+#' @export
+NumxMatrix_C <- function(A, B) {
+    .Call('_Utility_NumxMatrix_C', PACKAGE = 'Utility', A, B)
+}
+
 tAKA_RC <- function(A, K) {
     .Call('_Utility_tAKA_RC', PACKAGE = 'Utility', A, K)
 }

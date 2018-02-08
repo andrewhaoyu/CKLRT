@@ -1,7 +1,7 @@
 try(library(mgcv)) ; try(library(MASS)); library(nlme);
-library(compiler)
+library(compiler);library(Rcpp);library(RcppEigen)
 
-n = 30
+n = 100
 X = rnorm(n)
 
 p = 2

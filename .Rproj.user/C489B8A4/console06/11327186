@@ -234,3 +234,282 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git add[K[K[K[K[K[K[Kgit ads[K[K[Kadd -A
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git commit -m "second commit [K"
+[master 1f9efc4] second commit
+ 62 files changed, 1515 insertions(+), 525 deletions(-)
+ rewrite .Rproj.user/C489B8A4/console06/INDEX001 (100%)
+ rewrite .Rproj.user/C489B8A4/persistent-state (69%)
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/3386E334
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/3386E334-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/4E9E1C8D-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/62677F9A
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/62677F9A-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/63B449B0-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/7DFF3534
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/7DFF3534-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/810C08D1
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/810C08D1-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/82FB9929-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/865F0913
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/865F0913-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/9C53B810
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/9C53B810-contents
+ delete mode 100644 .Rproj.user/C489B8A4/sources/s-78E9CD8B/lock_file
+ create mode 100644 .gitignore
+ create mode 100644 R/RcppExports.R
+ create mode 100644 R/getp_au1.R
+ create mode 100644 R/getp_aud_estimate_pi_first.R
+ create mode 100644 R/omniRLRT.R
+ create mode 100644 R/omniRLRT_fast.R
+ create mode 100644 R/support.R
+ create mode 100644 R/try.R
+ create mode 100644 Rstudio_tip.Rmd
+ create mode 100644 Rstudio_tip.html
+ create mode 100644 inst.zip
+ rename man/{tAKA.Rd => AKA_C.Rd} (80%)
+ create mode 100644 man/Eigen_C.Rd
+ create mode 100644 man/Eigen_C_value.Rd
+ create mode 100644 man/getp_au1.Rd
+ create mode 100644 man/getp_aud_estimate_pi_first.Rd
+ create mode 100644 man/omniRLRT.Rd
+ create mode 100644 man/omniRLRT_fast.Rd
+ create mode 100644 src/RcppExports.cpp
+ create mode 100644 src/fastEgen_RC.cpp
+ rewrite src/tAKA.o (93%)
+ create mode 100644 src/tAKA_RC.cpp
+ create mode 100644 test/example.R
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git push
+Counting objects: 60, done.
+Delta compression using up to 8 threads.
+Compressing objects:   1% (1/57)   Compressing objects:   3% (2/57)   Compressing objects:   5% (3/57)   Compressing objects:   7% (4/57)   Compressing objects:   8% (5/57)   Compressing objects:  10% (6/57)   Compressing objects:  12% (7/57)   Compressing objects:  14% (8/57)   Compressing objects:  15% (9/57)   Compressing objects:  17% (10/57)   Compressing objects:  19% (11/57)   Compressing objects:  21% (12/57)   Compressing objects:  22% (13/57)   Compressing objects:  24% (14/57)   Compressing objects:  26% (15/57)   Compressing objects:  28% (16/57)   Compressing objects:  29% (17/57)   Compressing objects:  31% (18/57)   Compressing objects:  33% (19/57)   Compressing objects:  35% (20/57)   Compressing objects:  36% (21/57)   Compressing objects:  38% (22/57)   Compressing objects:  40% (23/57)   Compressing objects:  42% (24/57)   Compressing objects:  43% (25/57)   Compressing objects:  45% (26/57)   Compressing objects:  47% (27/57)   Compressing objects:  49% (28/57)   Compressing objects:  50% (29/57)   Compressing objects:  52% (30/57)   Compressing objects:  54% (31/57)   Compressing objects:  56% (32/57)   Compressing objects:  57% (33/57)   Compressing objects:  59% (34/57)   Compressing objects:  61% (35/57)   Compressing objects:  63% (36/57)   Compressing objects:  64% (37/57)   Compressing objects:  66% (38/57)   Compressing objects:  68% (39/57)   Compressing objects:  70% (40/57)   Compressing objects:  71% (41/57)   Compressing objects:  73% (42/57)   Compressing objects:  75% (43/57)   Compressing objects:  77% (44/57)   Compressing objects:  78% (45/57)   Compressing objects:  80% (46/57)   Compressing objects:  82% (47/57)   Compressing objects:  84% (48/57)   Compressing objects:  85% (49/57)   Compressing objects:  87% (50/57)   Compressing objects:  89% (51/57)   Compressing objects:  91% (52/57)   Compressing objects:  92% (53/57)   Compressing objects:  94% (54/57)   Compressing objects:  96% (55/57)   Compressing objects:  98% (56/57)   Compressing objects: 100% (57/57)   Compressing objects: 100% (57/57), done.
+Writing objects:   1% (1/60)   Writing objects:   3% (2/60)   Writing objects:   5% (3/60)   Writing objects:   6% (4/60)   Writing objects:   8% (5/60)   Writing objects:  10% (6/60)   Writing objects:  11% (7/60)   Writing objects:  13% (8/60)   Writing objects:  15% (9/60)   Writing objects:  16% (10/60)   Writing objects:  18% (11/60)   Writing objects:  20% (12/60)   Writing objects:  21% (13/60)   Writing objects:  23% (14/60)   Writing objects:  25% (15/60)   Writing objects:  26% (16/60)   Writing objects:  28% (17/60)   Writing objects:  30% (18/60)   Writing objects:  31% (19/60)   Writing objects:  33% (20/60)   Writing objects:  35% (21/60)   Writing objects:  36% (22/60)   Writing objects:  38% (23/60)   Writing objects:  40% (24/60)   Writing objects:  41% (25/60)   Writing objects:  43% (26/60)   Writing objects:  45% (27/60)   Writing objects:  46% (28/60)   Writing objects:  48% (29/60)   Writing objects:  50% (30/60)   Writing objects:  51% (31/60)   Writing objects:  53% (32/60)   Writing objects:  55% (33/60)   Writing objects:  58% (35/60)   Writing objects:  60% (36/60)   Writing objects:  61% (37/60)   Writing objects:  63% (38/60)   Writing objects:  65% (39/60)   Writing objects:  66% (40/60)   Writing objects:  68% (41/60)   Writing objects:  70% (42/60)   Writing objects:  71% (43/60)   Writing objects:  73% (44/60)   Writing objects:  76% (46/60)   Writing objects:  80% (48/60)   Writing objects:  83% (50/60)   Writing objects:  85% (51/60)   Writing objects:  86% (52/60)   Writing objects:  88% (53/60)   Writing objects:  90% (54/60)   Writing objects:  91% (55/60)   Writing objects:  93% (56/60)   Writing objects:  95% (57/60)   Writing objects:  96% (58/60)   Writing objects:  98% (59/60)   Writing objects: 100% (60/60)   Writing objects: 100% (60/60), 475.05 KiB | 0 bytes/s, done.
+Total 60 (delta 15), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/15)   [Kremote: Resolving deltas:   6% (1/15)   [Kremote: Resolving deltas:  13% (2/15)   [Kremote: Resolving deltas:  20% (3/15)   [Kremote: Resolving deltas:  26% (4/15)   [Kremote: Resolving deltas:  33% (5/15)   [Kremote: Resolving deltas:  46% (7/15)   [Kremote: Resolving deltas:  53% (8/15)   [Kremote: Resolving deltas:  60% (9/15)   [Kremote: Resolving deltas:  66% (10/15)   [Kremote: Resolving deltas:  73% (11/15)   [Kremote: Resolving deltas:  80% (12/15)   [Kremote: Resolving deltas:  86% (13/15)   [Kremote: Resolving deltas:  93% (14/15)   [Kremote: Resolving deltas: 100% (15/15)   [Kremote: Resolving deltas: 100% (15/15), completed with 10 local objects.[K
+To https://github.com/andrewhaoyu/Utility.git
+   dfdd5a7..1f9efc4  master -> master
+time1 <- proc.time()
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ omniRLRT(y, X = cbind(X, E),K1 = G %*% t(G ), K2 = (G*E) %*% t(G * E) , N = 10000, length.rho = 200, length.lambda = 21 )
+bash: syntax error near unexpected token `y,'
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ time1 <- proc.time()-time1
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/Utility[?1034hNCI-02034757-ML:Utility zhangh24$ ]0;~/GoogleDrive/project/Ni/Utilityn = 300
+X = rnorm(n)
+
+p = 2
+G = runif(n*p)< 0.5
+G = G + runif(n*p) < 0.5
+G = matrix(G, n,p)
+E = (runif(n) < 0.5)^2
+y = rnorm(n) + G[,1] * 0.3
+[?1034hNCI-02034757-ML:Utility zhangh24$ n = 300
+bash: n: command not found
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ X = rnorm(n)
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ 
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ p = 2
+bash: p: command not found
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ G = runif(n*p)< 0.5
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ G = G + runif(n*p) < 0.5
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ G = matrix(G, n,p)
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ E = (runif(n) < 0.5)^2
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ y = rnorm(n) + G[,1] * 0.3
+bash: syntax error near unexpected token `('
+    for (i in 1:length.lambda){
+bash: syntax error near unexpected token `('
+]0;~/GoogleDrive/project/Ni/Utility[?1034hNCI-02034757-ML:Utility zhangh24$ [KNCI-02034757-ML:Utility zhangh24$ nih
+
+* This warning banner provides privacy and security notices consistent
+with applicable federal laws, directives, and other federal guidance for 
+accessing this Government system, which includes (1) this computer network, 
+(2) all computers connected to this network, and (3) all devices and storage 
+media attached to this network or to a computer on this network.
+ 
+* This system is provided for Government-authorized use only. 
+
+* Unauthorized or improper use of this system is prohibited and may result 
+in disciplinary action and/or civil and criminal penalties.
+    
+* Personal use of social media and networking sites on this system is 
+limited as to not interfere with official work duties and is subject 
+to monitoring.
+
+* By using this system, you understand and consent to the following:
+        
+  * The Government may monitor, record, and audit your system usage, 
+    including usage of personal devices and email systems for official
+    duties or to conduct HHS business. Therefore, you have no reasonable 
+    expectation of privacy regarding any communication or data transiting 
+    or stored on this system. At any time, and for any lawful Government 
+    purpose, the government may monitor, intercept, and search and seize 
+    any communication or data transiting or stored on this system.
+
+  * Any communication or data transiting or stored on this system may 
+    be disclosed or used for any lawful Government purpose.
+
+--
+NOTE: This system is rebooted for patches and maintenance on the first
+Monday of every month at 7:00 AM unless Monday is a holiday, in which
+case it is rebooted the following Tuesday.  A detailed schedule is
+available at    http://helix.nih.gov/Documentation/reboots.html
+
+Warning: No xauth data; using fake authentication data for X11 forwarding.
+Last login: Sun Feb  4 17:20:57 2018 from 10.243.130.68
+[1m[7m%[27m[1m[0m                                                                            ]2;zhangh24@biowulf: ~]1;~[0m[27m[24m[J[01;32m➜  [36m~[00m [K[?1h=ss20[?1l>
+]2;sinteractive --mem=20g]1;s20salloc.exe: Pending job allocation 60929350
+salloc.exe: job 60929350 queued and waiting for resources
+salloc.exe: job 60929350 has been allocated resources
+salloc.exe: Granted job allocation 60929350
+salloc.exe: Waiting for resource configuration
+salloc.exe: Nodes cn3188 are ready for job
+git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .DS_Store[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186.env[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/C489B8A4/cpp-definition-cache[m
+	[31mmodified:   .Rproj.user/C489B8A4/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/C489B8A4/persistent-state[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/7C62039A[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/97FA1D0D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/FE5B821D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/INDEX[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   NAMESPACE[m
+	[31mmodified:   R/RcppExports.R[m
+	[31mmodified:   R/omniRLRT_fast.R[m
+	[31mmodified:   src/RcppExports.cpp[m
+	[31mmodified:   src/Utility.so[m
+	[31mmodified:   src/fastEgen_RC.cpp[m
+	[31mmodified:   test/example.R[m
+	[31mmodified:   test/test.R[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mR/fast_mult.cpp[m
+	[31mman/ColSum_C.Rd[m
+	[31mman/ColSumtwomatrix_C.Rd[m
+	[31mman/Elementwisesquare_C.Rd[m
+	[31mman/MatMult_C.Rd[m
+	[31mman/MatrixPlus_C.Rd[m
+	[31mman/MatrixRowMax_C.Rd[m
+	[31mman/NumxMatrix_C.Rd[m
+	[31mman/Sum_C.Rd[m
+	[31mman/VecMultMat_C.Rd[m
+	[31msrc/.DS_Store[m
+	[31mtest/testC.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git add -A[K[K[K[K[K[K[K[K[K[Kvi .gitignore
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+	status
+	stage
+	stash
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .DS_Store[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186.env[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/C489B8A4/cpp-definition-cache[m
+	[31mmodified:   .Rproj.user/C489B8A4/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/C489B8A4/persistent-state[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/7C62039A[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/97FA1D0D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/FE5B821D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/INDEX[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   .gitignore[m
+	[31mmodified:   NAMESPACE[m
+	[31mmodified:   R/RcppExports.R[m
+	[31mmodified:   R/omniRLRT_fast.R[m
+	[31mmodified:   src/RcppExports.cpp[m
+	[31mmodified:   src/Utility.so[m
+	[31mmodified:   src/fastEgen_RC.cpp[m
+	[31mmodified:   test/example.R[m
+	[31mmodified:   test/test.R[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mR/fast_mult.cpp[m
+	[31mman/ColSum_C.Rd[m
+	[31mman/ColSumtwomatrix_C.Rd[m
+	[31mman/Elementwisesquare_C.Rd[m
+	[31mman/MatMult_C.Rd[m
+	[31mman/MatrixPlus_C.Rd[m
+	[31mman/MatrixRowMax_C.Rd[m
+	[31mman/NumxMatrix_C.Rd[m
+	[31mman/Sum_C.Rd[m
+	[31mman/VecMultMat_C.Rd[m
+	[31msrc/.DS_Store[m
+	[31mtest/testC.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ vi i[K.gitn[Kignore
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git stats[Kus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .DS_Store[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/11327186.env[m
+	[31mmodified:   .Rproj.user/C489B8A4/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/C489B8A4/cpp-definition-cache[m
+	[31mmodified:   .Rproj.user/C489B8A4/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/C489B8A4/persistent-state[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/7C62039A[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/97FA1D0D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/FE5B821D[m
+	[31mmodified:   .Rproj.user/C489B8A4/sources/prop/INDEX[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   .gitignore[m
+	[31mmodified:   NAMESPACE[m
+	[31mmodified:   R/RcppExports.R[m
+	[31mmodified:   R/omniRLRT_fast.R[m
+	[31mmodified:   src/RcppExports.cpp[m
+	[31mmodified:   src/Utility.so[m
+	[31mmodified:   src/fastEgen_RC.cpp[m
+	[31mmodified:   test/example.R[m
+	[31mmodified:   test/test.R[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mR/fast_mult.cpp[m
+	[31mman/ColSum_C.Rd[m
+	[31mman/ColSumtwomatrix_C.Rd[m
+	[31mman/Elementwisesquare_C.Rd[m
+	[31mman/MatMult_C.Rd[m
+	[31mman/MatrixPlus_C.Rd[m
+	[31mman/MatrixRowMax_C.Rd[m
+	[31mman/NumxMatrix_C.Rd[m
+	[31mman/Sum_C.Rd[m
+	[31mman/VecMultMat_C.Rd[m
+	[31msrc/.DS_Store[m
+	[31mtest/testC.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/GoogleDrive/project/Ni/UtilityNCI-02034757-ML:Utility zhangh24$ git add -A
