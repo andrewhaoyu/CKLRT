@@ -199,3 +199,41 @@ NumericVector LR0_fixRho_C(NumericVector LamdasR,
 
 }
 
+
+
+//' transfirst
+//' @param rho rho value
+//' @param K1R K1 matrix
+//' @param K2R K2 matrix
+//' @export
+// [[Rcpp::export]]
+NumericMatrix transfirst(double rho,
+                            NumericMatrix K1R,
+                            NumericMatrix K2R){
+
+  const Map<MatrixXd> K1(as<Map<MatrixXd> >(K1R));
+  const Map<MatrixXd> K2(as<Map<MatrixXd> >(K2R));
+  Eigen::MatrixXd K = rho*K1+(1-rho)*K2;
+  int N = K1.rows();
+  SelfAdjointEigenSolver<MatrixXd> es(K);
+  Eigen::VectorXd Kevalues = es.eigenvalues().reverse();
+  Eigen::MatrixXd Kematrix = es.eigenvectors().rowwise().reverse();
+  int k;
+  for(k = 0;k<N;k++){
+    if((Kevalues(k))<1e-10){
+      break;
+    }
+  }
+  Eigen::VectorXd xi = Kevalues.head(k);
+  Eigen::MatrixXd xis = xi.array().sqrt().matrix().asDiagonal();
+  Eigen::MatrixXd ximat = Kematrix.leftCols(k);
+  Eigen::MatrixXd phi=ximat*xis;
+
+
+
+
+return Rcpp::wrap(phi);
+
+                            }
+
+

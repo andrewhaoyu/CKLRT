@@ -111,7 +111,10 @@ omniRLRT_fast = function(y, X,K1, K2, N = 10000, length.rho = 200, length.lambda
       k  = length(wK)
       xi = eK$values[wK]
       # phi= eK$vectors[,wK] %*% diag(sqrt(eK$values[wK]))
-      phi= t(t(eK$vectors[,wK]) * sqrt(eK$values[wK]) )
+      phi= t(t(eK$vectors[,wK]) * sqrt(xi) )
+
+
+
       mu = Eigen_C_value(MatMult_C(MatMult_C(t(phi),P0), phi))
 
       # mu should be the same as eigen AKA?

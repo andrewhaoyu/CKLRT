@@ -92,6 +92,7 @@ if (LR <= 0){
     print(j)
     rho= all_rho[j]
     LR0_fixRho = matrix(NA, N, length.lambda)
+    phi.test <- transfirst(rho,K1,K2)
     K  = rho*K1 +(1-rho)*K2
     eK = Eigen_C(K)
     wK = which(eK$values > 1e-10)

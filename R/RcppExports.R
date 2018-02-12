@@ -109,7 +109,12 @@ LR0_fixRho_C <- function(LamdasR, muR, w1R, w2R, nminuspx) {
     .Call('_Utility_LR0_fixRho_C', PACKAGE = 'Utility', LamdasR, muR, w1R, w2R, nminuspx)
 }
 
-tAKA_RC <- function(A, K) {
-    .Call('_Utility_tAKA_RC', PACKAGE = 'Utility', A, K)
+#' transfirst
+#' @param rho rho value
+#' @param K1R K1 matrix
+#' @param K2R K2 matrix
+#' @export
+transfirst <- function(rho, K1R, K2R) {
+    .Call('_Utility_transfirst', PACKAGE = 'Utility', rho, K1R, K2R)
 }
 

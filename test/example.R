@@ -1,9 +1,10 @@
 library(devtools)
+library(roxygen2)
 install_github("andrewhaoyu/Utility")
 try(library(mgcv)) ; try(library(MASS)); library(nlme);
 library(compiler);library(Rcpp);library(RcppEigen)
 library(Utility)
-n = 1000
+n = 100
 X = rnorm(n)
 
 p = 2

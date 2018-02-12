@@ -170,20 +170,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// tAKA_RC
-Rcpp::NumericMatrix tAKA_RC(NumericMatrix A, NumericMatrix K);
-RcppExport SEXP _Utility_tAKA_RC(SEXP ASEXP, SEXP KSEXP) {
+// transfirst
+NumericMatrix transfirst(double rho, NumericMatrix K1R, NumericMatrix K2R);
+RcppExport SEXP _Utility_transfirst(SEXP rhoSEXP, SEXP K1RSEXP, SEXP K2RSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericMatrix >::type A(ASEXP);
-    Rcpp::traits::input_parameter< NumericMatrix >::type K(KSEXP);
-    rcpp_result_gen = Rcpp::wrap(tAKA_RC(A, K));
+    Rcpp::traits::input_parameter< double >::type rho(rhoSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type K1R(K1RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type K2R(K2RSEXP);
+    rcpp_result_gen = Rcpp::wrap(transfirst(rho, K1R, K2R));
     return rcpp_result_gen;
 END_RCPP
 }
-
-RcppExport void tAKA(void *, void *, void *, void *, void *);
 
 static const R_CallMethodDef CallEntries[] = {
     {"_Utility_Eigen_C", (DL_FUNC) &_Utility_Eigen_C, 1},
@@ -200,8 +199,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_Utility_MatrixPlus_C", (DL_FUNC) &_Utility_MatrixPlus_C, 2},
     {"_Utility_NumxMatrix_C", (DL_FUNC) &_Utility_NumxMatrix_C, 2},
     {"_Utility_LR0_fixRho_C", (DL_FUNC) &_Utility_LR0_fixRho_C, 5},
-    {"_Utility_tAKA_RC", (DL_FUNC) &_Utility_tAKA_RC, 2},
-    {"tAKA", (DL_FUNC) &tAKA, 5},
+    {"_Utility_transfirst", (DL_FUNC) &_Utility_transfirst, 3},
     {NULL, NULL, 0}
 };
 
