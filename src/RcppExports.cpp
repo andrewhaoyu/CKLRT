@@ -190,6 +190,42 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// LR0_fixRho_LRT_C
+NumericMatrix LR0_fixRho_LRT_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericMatrix w2R, int nminuspx, NumericVector xiR);
+RcppExport SEXP _Utility_LR0_fixRho_LRT_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP, SEXP xiRSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type LamdasR(LamdasRSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type muR(muRSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type w1R(w1RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type w2R(w2RSEXP);
+    Rcpp::traits::input_parameter< int >::type nminuspx(nminuspxSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type xiR(xiRSEXP);
+    rcpp_result_gen = Rcpp::wrap(LR0_fixRho_LRT_C(LamdasR, muR, w1R, w2R, nminuspx, xiR));
+    return rcpp_result_gen;
+END_RCPP
+}
+// doubleloop_LRT
+NumericMatrix doubleloop_LRT(NumericMatrix K1R, NumericMatrix K2R, NumericMatrix P0R, NumericMatrix AR, NumericMatrix U1R, NumericMatrix wR, NumericVector LamdasR, int nminuspx, NumericVector all_rho, NumericMatrix LR0_allRhoR);
+RcppExport SEXP _Utility_doubleloop_LRT(SEXP K1RSEXP, SEXP K2RSEXP, SEXP P0RSEXP, SEXP ARSEXP, SEXP U1RSEXP, SEXP wRSEXP, SEXP LamdasRSEXP, SEXP nminuspxSEXP, SEXP all_rhoSEXP, SEXP LR0_allRhoRSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type K1R(K1RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type K2R(K2RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type P0R(P0RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type AR(ARSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type U1R(U1RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type wR(wRSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type LamdasR(LamdasRSEXP);
+    Rcpp::traits::input_parameter< int >::type nminuspx(nminuspxSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type all_rho(all_rhoSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type LR0_allRhoR(LR0_allRhoRSEXP);
+    rcpp_result_gen = Rcpp::wrap(doubleloop_LRT(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_Utility_Eigen_C", (DL_FUNC) &_Utility_Eigen_C, 1},
@@ -207,6 +243,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_Utility_NumxMatrix_C", (DL_FUNC) &_Utility_NumxMatrix_C, 2},
     {"_Utility_LR0_fixRho_C", (DL_FUNC) &_Utility_LR0_fixRho_C, 5},
     {"_Utility_doubleloop", (DL_FUNC) &_Utility_doubleloop, 10},
+    {"_Utility_LR0_fixRho_LRT_C", (DL_FUNC) &_Utility_LR0_fixRho_LRT_C, 6},
+    {"_Utility_doubleloop_LRT", (DL_FUNC) &_Utility_doubleloop_LRT, 10},
     {NULL, NULL, 0}
 };
 

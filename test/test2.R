@@ -1,8 +1,13 @@
 
 y=y; X = cbind(X, E);K1 = G %*% t(G); K2 = (G*E) %*% t(G * E) ; N = 10000; length.rho = 200; length.lambda = 21
 
-
 X = X[,c(1,2)]
+
+
+
+
+
+
 
 
 method = "ML"
@@ -16,7 +21,8 @@ if (is.null(X)){
   X1 = cbind(1,X)
   px = ncol(X1)
 }
-XX   = t(X1) %*% X1
+XX   = MatMult_C(t(X1),X1)
+
 P0   = diag(n)- MatMult_C(MatMult_C(X1,ginv(XX)),t(X1))
 
 eP   = Eigen_C(P0)
@@ -68,38 +74,33 @@ if (LR <= 0){
 
   mu = mu/max(mu, xi)
   xi = xi/max(mu,xi)
-  AKA = t(A) %*% K %*% A
-  eV1 = eigen(AKA, symmetric = T)
-  # eV1= eV
-  # U1 = eV1$vectors
+  AKA = MatMult_C(MatMult_C(t(A),K),A)
+  eV = Eigen_C(AKA)
+  U_1 = eV$vectors
+  w.double = w^2
   w1 = (w^2)[1:k,]
-  w2 = colSums((w^2)[-(1:k),])
+  w2 = ColSum_C((w.double)[-(1:k),])
 
   if (length(mu) < k){mu = c(mu,rep(0, k - length(mu)))}
   if (length(xi) < k){xi = c(xi,rep(0, k - length(xi)))}
-  for (i in 1:length.lambda){
-    lam = Lambdas[i]
-    Dn = colSums(w1/(1 + lam*mu))+ w2
-    Nn = colSums(lam*w1*mu/(1 + lam*mu))
-    temp = (n-px)*log(1 + Nn/Dn) - sum(log(1 + lam*xi))
-    LR0_fixRho[,i] = ifelse(temp < 0, 0, temp)
-  }
-  LR0_fixRho <- LR0_fixRho_C(Lambdas,
-                             mu,
-                             w1,
-                             w2,
-                             n-px)
+
+  LR0_fixRho <- LR0_fixRho_LRT_C(Lambdas,
+                                 mu,
+                                 w1,
+                                 w2,
+                                 n-px,
+                                 xi)
   LR0_allRho[,1] = MatrixRowMax_C(LR0_fixRho)
-  LR0_allRho <- doubleloop(K1,
-                           K2,
-                           P0,
-                           A,
-                           U_1,
-                           w,
-                           Lambdas,
-                           n-px,
-                           all_rho,
-                           LR0_allRho)
+  LR0_allRho <- doubleloop_LRT(K1,
+                               K2,
+                               P0,
+                               A,
+                               U_1,
+                               w,
+                               Lambdas,
+                               n-px,
+                               all_rho,
+                               LR0_allRho)
   LR0 = MatrixRowMax_C(LR0_allRho)
   LR0 = ifelse(LR0 > 0, LR0, 0)
   p.dir = mean(LR < LR0)
