@@ -25,7 +25,7 @@ XX   = MatMult_C(t(X1),X1)
 
 P0   = diag(n)- MatMult_C(MatMult_C(X1,ginv(XX)),t(X1))
 
-eP   = Eigen_C(P0)
+eP   = eigen(P0)
 A    = eP$vector[,eP$values > 1e-10]
 # invP = ginv(P0)
 # A2   = eP$vectors %*% diag(eP$values)
@@ -53,11 +53,11 @@ fit1 = lme(y~X, random = list(group=pdIdent(~-1+phi1), group = pdIdent(~-1+phi2)
 fit0 = lm(y~X)
 LR = max(0, 2*(logLik(fit1, REML = F) -logLik(fit0, REML = F)))
 
-if (LR <= 0){
-  p.dir = 1;
-  p.au1=1; p.aud = 1
+#if (LR <= 0){
+ # p.dir = 1;
+  #p.au1=1; p.aud = 1
 
-}else{
+#}else{
   #For the first kernel
   LR0_allRho = matrix(NA, N, length.rho)
   set.seed(123)
@@ -91,7 +91,7 @@ if (LR <= 0){
                                  n-px,
                                  xi)
   LR0_allRho[,1] = MatrixRowMax_C(LR0_fixRho)
-  LR0_allRho <- doubleloop_LRT(K1,
+ ww.double.new<- doubleloop_LRT(K1,
                                K2,
                                P0,
                                A,
@@ -101,6 +101,11 @@ if (LR <= 0){
                                n-px,
                                all_rho,
                                LR0_allRho)
+  LR0_allRho.fast[1:10,1:2]
+  LR0_allRho[1:10,1:2]
+ all.equal(LR0_allRho.fast,LR0_allRho)
+ all.equal(LR0_allRho.fast,w1)
+ all.equal(  LR0_allRho.fast,AKA)
   LR0 = MatrixRowMax_C(LR0_allRho)
   LR0 = ifelse(LR0 > 0, LR0, 0)
   p.dir = mean(LR < LR0)

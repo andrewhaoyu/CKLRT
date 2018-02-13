@@ -371,7 +371,8 @@ NumericMatrix LR0_fixRho_LRT_C(NumericVector LamdasR,
 //' @param wR w matrix
 //' @param LamdasR Lamdas vector
 //' @param nminuspx n-px
-//' @param all_rho
+//' @param all_rho rho vector
+//' @param LR0_allRhoR LR0_allRhomatrix
 //' @export
 // [[Rcpp::export]]
 NumericMatrix doubleloop_LRT(NumericMatrix K1R,
@@ -426,6 +427,7 @@ NumericMatrix doubleloop_LRT(NumericMatrix K1R,
     xi = xi/muximax;
     Eigen::MatrixXd AKA = rho*AKA1+(1-rho)*AKA2;
 
+
     SelfAdjointEigenSolver<MatrixXd> eAKA(AKA);
     Eigen::MatrixXd U2 = eAKA.eigenvectors().rowwise().reverse();
     Eigen::MatrixXd ww= U2.transpose()*U1W;
@@ -435,7 +437,7 @@ NumericMatrix doubleloop_LRT(NumericMatrix K1R,
 
     Eigen::MatrixXd w2 = ww2.bottomRows(n-k).colwise().sum();
 
-    if(mu.size()<k){
+    if(mu.size()<(k)){
       Eigen::VectorXd munew=xi;
       munew.head(mu.size())=mu;
       munew.tail(k-mu.size()).array() = 0 ;
@@ -468,7 +470,7 @@ NumericMatrix doubleloop_LRT(NumericMatrix K1R,
     }
     Map<MatrixXd> LR0_fixRhoE(as<Map<MatrixXd> >(LR0_fixRho));
     LR0_allRho.col(j) = LR0_fixRhoE.rowwise().maxCoeff();
-  }
+ }
 
 
   return Rcpp::wrap(LR0_allRho);

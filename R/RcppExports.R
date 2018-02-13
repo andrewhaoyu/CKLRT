@@ -144,7 +144,8 @@ LR0_fixRho_LRT_C <- function(LamdasR, muR, w1R, w2R, nminuspx, xiR) {
 #' @param wR w matrix
 #' @param LamdasR Lamdas vector
 #' @param nminuspx n-px
-#' @param all_rho
+#' @param all_rho rho vector
+#' @param LR0_allRhoR LR0_allRhomatrix
 #' @export
 doubleloop_LRT <- function(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR) {
     .Call('_Utility_doubleloop_LRT', PACKAGE = 'Utility', K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)

@@ -23,6 +23,10 @@ doubleloop_LRT(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho,
 \item{LamdasR}{Lamdas vector}
 
 \item{nminuspx}{n-px}
+
+\item{all_rho}{rho vector}
+
+\item{LR0_allRhoR}{LR0_allRhomatrix}
 }
 \description{
 doubleloop_LRT
