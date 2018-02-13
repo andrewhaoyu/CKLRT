@@ -156,7 +156,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // LR0_fixRho_C
-NumericVector LR0_fixRho_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericMatrix w2R, int nminuspx);
+NumericMatrix LR0_fixRho_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericMatrix w2R, int nminuspx);
 RcppExport SEXP _Utility_LR0_fixRho_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
@@ -170,16 +170,23 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// transfirst
-NumericMatrix transfirst(double rho, NumericMatrix K1R, NumericMatrix K2R);
-RcppExport SEXP _Utility_transfirst(SEXP rhoSEXP, SEXP K1RSEXP, SEXP K2RSEXP) {
+// doubleloop
+NumericMatrix doubleloop(NumericMatrix K1R, NumericMatrix K2R, NumericMatrix P0R, NumericMatrix AR, NumericMatrix U1R, NumericMatrix wR, NumericVector LamdasR, int nminuspx, NumericVector all_rho, NumericMatrix LR0_allRhoR);
+RcppExport SEXP _Utility_doubleloop(SEXP K1RSEXP, SEXP K2RSEXP, SEXP P0RSEXP, SEXP ARSEXP, SEXP U1RSEXP, SEXP wRSEXP, SEXP LamdasRSEXP, SEXP nminuspxSEXP, SEXP all_rhoSEXP, SEXP LR0_allRhoRSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< double >::type rho(rhoSEXP);
     Rcpp::traits::input_parameter< NumericMatrix >::type K1R(K1RSEXP);
     Rcpp::traits::input_parameter< NumericMatrix >::type K2R(K2RSEXP);
-    rcpp_result_gen = Rcpp::wrap(transfirst(rho, K1R, K2R));
+    Rcpp::traits::input_parameter< NumericMatrix >::type P0R(P0RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type AR(ARSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type U1R(U1RSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type wR(wRSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type LamdasR(LamdasRSEXP);
+    Rcpp::traits::input_parameter< int >::type nminuspx(nminuspxSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type all_rho(all_rhoSEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type LR0_allRhoR(LR0_allRhoRSEXP);
+    rcpp_result_gen = Rcpp::wrap(doubleloop(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -199,7 +206,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_Utility_MatrixPlus_C", (DL_FUNC) &_Utility_MatrixPlus_C, 2},
     {"_Utility_NumxMatrix_C", (DL_FUNC) &_Utility_NumxMatrix_C, 2},
     {"_Utility_LR0_fixRho_C", (DL_FUNC) &_Utility_LR0_fixRho_C, 5},
-    {"_Utility_transfirst", (DL_FUNC) &_Utility_transfirst, 3},
+    {"_Utility_doubleloop", (DL_FUNC) &_Utility_doubleloop, 10},
     {NULL, NULL, 0}
 };
 

@@ -92,7 +92,7 @@ if (LR <= 0){
     print(j)
     rho= all_rho[j]
     LR0_fixRho = matrix(NA, N, length.lambda)
-    phi.test <- transfirst(rho,K1,K2)
+#    phi.test <- transfirst(rho,K1,K2)
     K  = rho*K1 +(1-rho)*K2
     eK = Eigen_C(K)
     wK = which(eK$values > 1e-10)
@@ -116,6 +116,7 @@ if (LR <= 0){
     # By the proof, it is also ww = t(U_2) %*% U_1 %*% w
     ww.double = ww^2
     w1 = (ww.double)[1:k,]
+
     w2 = ColSum_C((ww.double)[-(1:k),])
 
     if (length(mu) < k){mu = c(mu,rep(0, k - length(mu)))}
@@ -128,8 +129,20 @@ if (LR <= 0){
       temp = (n-px)*log(1 + Nn/Dn) - Sum_C(log(1 + lam*mu))
       LR0_fixRho[,i] = ifelse(temp < 0, 0, temp)
     }
+
     LR0_allRho[,j] = apply(LR0_fixRho, 1, max)
   }
+  LR0_allRho.test <- transfirst(K1,
+                                K2,
+                                P0,
+                                A,
+                                U_1,
+                                w,
+                                Lambdas,
+                                n-px,
+                                all_rho,
+                                LR0_allRho)
+  all.equal(LR0_allRho.test,LR0_allRho)
   LR0 = apply(LR0_allRho, 1, max)
   LR0 = ifelse(LR0 > 0, LR0, 0)
   p.dir = mean(LR < LR0)

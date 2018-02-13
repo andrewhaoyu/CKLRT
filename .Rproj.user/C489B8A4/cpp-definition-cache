@@ -140,13 +140,13 @@
                 "column" : 15,
                 "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
                 "kind" : 6,
-                "line" : 210,
-                "name" : "transfirst(double, NumericMatrix, NumericMatrix)",
+                "line" : 216,
+                "name" : "doubleloop(NumericMatrix, NumericMatrix, NumericMatrix, NumericMatrix, NumericMatrix, NumericMatrix, NumericVector, int, NumericVector, NumericMatrix)",
                 "parent_name" : "",
-                "usr" : "c:@F@transfirst#d#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#"
+                "usr" : "c:@F@doubleloop#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#S0_#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#I#S1_#S0_#"
             }
         ],
         "file" : "/Users/zhangh24/GoogleDrive/project/Ni/Utility/src/fastEgen_RC.cpp",
-        "file_last_write" : 1518417723
+        "file_last_write" : 1518496395
     }
 ]

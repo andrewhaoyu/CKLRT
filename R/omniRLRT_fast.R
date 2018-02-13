@@ -102,47 +102,16 @@ omniRLRT_fast = function(y, X,K1, K2, N = 10000, length.rho = 200, length.lambda
     # }
      LR0_allRho[,1] = MatrixRowMax_C(LR0_fixRho)
 
-    for (j in 2:length.rho){
-      rho= all_rho[j]
-      LR0_fixRho = matrix(NA, N, length.lambda)
-      K  = rho*K1 +(1-rho)*K2
-      eK = Eigen_C(K)
-      wK = which(eK$values > 1e-10)
-      k  = length(wK)
-      xi = eK$values[wK]
-      # phi= eK$vectors[,wK] %*% diag(sqrt(eK$values[wK]))
-      phi= t(t(eK$vectors[,wK]) * sqrt(xi) )
-
-
-
-      mu = Eigen_C_value(MatMult_C(MatMult_C(t(phi),P0), phi))
-
-      # mu should be the same as eigen AKA?
-      mu = mu/max(mu, xi)
-      xi = xi/max(mu,xi)
-      # A is eigen vector of P_0
-      AKA = MatMult_C(MatMult_C(t(A),K), A)
-      eV = Eigen_C(AKA)
-      W2 = MatMult_C(A,eV$vectors)
-      U2 = eV$vectors
-      ww = MatMult_C(MatMult_C(t(U2),U_1),w)
-
-      # ww = t(W2) %*% invP %*% W1  %*% w  # ww is the rotated version of w.
-      # By the proof, it is also ww = t(U_2) %*% U_1 %*% w
-      ww.double = ww^2
-      w1 = (ww.double)[1:k,]
-      w2 = ColSum_C((ww.double)[-(1:k),])
-
-      if (length(mu) < k){mu = c(mu,rep(0, k - length(mu)))}
-      if (length(xi) < k){xi = c(xi,rep(0, k - length(xi)))}
-
-      LR0_fixRho <- LR0_fixRho_C(Lambdas,
-                                 mu,
-                                 w1,
-                                 w2,
-                                 n-px)
-      LR0_allRho[,j] = MatrixRowMax_C(LR0_fixRho)
-    }
+     LR0_allRho <- doubleloop(K1,
+                                   K2,
+                                   P0,
+                                   A,
+                                   U_1,
+                                   w,
+                                   Lambdas,
+                                   n-px,
+                                   all_rho,
+                                   LR0_allRho)
     LR0 = MatrixRowMax_C(LR0_allRho)
     LR0 = ifelse(LR0 > 0, LR0, 0)
     p.dir = mean(LR < LR0)

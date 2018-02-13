@@ -162,7 +162,7 @@ SEXP NumxMatrix_C(double A, Eigen::MatrixXd B){
 //' @param nminuspx n-px
 //' @export
 // [[Rcpp::export]]
-NumericVector LR0_fixRho_C(NumericVector LamdasR,
+NumericMatrix LR0_fixRho_C(NumericVector LamdasR,
                            NumericVector muR,
                            NumericMatrix w1R,
                            NumericMatrix w2R,
@@ -201,38 +201,116 @@ NumericVector LR0_fixRho_C(NumericVector LamdasR,
 
 
 
-//' transfirst
-//' @param rho rho value
+//' doubleloop
 //' @param K1R K1 matrix
 //' @param K2R K2 matrix
+//' @param P0R P0 matrix
+//' @param AR A matrix
+//' @param U1R U1 vector
+//' @param wR w matrix
+//' @param LamdasR Lamdas vector
+//' @param nminuspx n-px
+//' @param all_rho
 //' @export
 // [[Rcpp::export]]
-NumericMatrix transfirst(double rho,
-                            NumericMatrix K1R,
-                            NumericMatrix K2R){
+NumericMatrix doubleloop(NumericMatrix K1R,
+                            NumericMatrix K2R,
+                            NumericMatrix P0R,
+                            NumericMatrix AR,
+                            NumericMatrix U1R,
+                            NumericMatrix wR,
+                            NumericVector LamdasR,
+                            int nminuspx,
+                            NumericVector all_rho,
+                            NumericMatrix LR0_allRhoR){
 
   const Map<MatrixXd> K1(as<Map<MatrixXd> >(K1R));
   const Map<MatrixXd> K2(as<Map<MatrixXd> >(K2R));
-  Eigen::MatrixXd K = rho*K1+(1-rho)*K2;
-  int N = K1.rows();
-  SelfAdjointEigenSolver<MatrixXd> es(K);
-  Eigen::VectorXd Kevalues = es.eigenvalues().reverse();
-  Eigen::MatrixXd Kematrix = es.eigenvectors().rowwise().reverse();
-  int k;
-  for(k = 0;k<N;k++){
-    if((Kevalues(k))<1e-10){
-      break;
+  const Map<MatrixXd> P0(as<Map<MatrixXd> >(P0R));
+  const Map<MatrixXd> A(as<Map<MatrixXd> >(AR));
+  const Map<MatrixXd> w(as<Map<MatrixXd> >(wR));
+  const Map<MatrixXd> U1(as<Map<MatrixXd> >(U1R));
+  const Map<VectorXd> Lamdas(as<Map<VectorXd> >(LamdasR));
+  Map<MatrixXd> LR0_allRho(as<Map<MatrixXd> >(LR0_allRhoR));
+  double rho;
+  Eigen::MatrixXd AKA1 = A.transpose()*K1*A;
+  Eigen::MatrixXd AKA2 = A.transpose()*K2*A;
+  Eigen::MatrixXd U1W = U1*w;
+  for(int j =1;j<all_rho.size();j++){
+    rho = all_rho(j);
+    Eigen::MatrixXd K = rho*K1+(1-rho)*K2;
+    int Knrow = K1.rows();
+    SelfAdjointEigenSolver<MatrixXd> es(K);
+    Eigen::VectorXd Kevalues = es.eigenvalues().reverse();
+    Eigen::MatrixXd Kematrix = es.eigenvectors().rowwise().reverse();
+    int k;
+    for(k = 0;k<Knrow;k++){
+      if((Kevalues(k))<1e-10){
+        break;
+      }
     }
+    Eigen::VectorXd xi = Kevalues.head(k);
+    Eigen::MatrixXd xis = xi.array().sqrt().matrix().asDiagonal();
+    Eigen::MatrixXd ximat = Kematrix.leftCols(k);
+    Eigen::MatrixXd phi=ximat*xis;
+    Eigen::MatrixXd phiPphi = phi.transpose()*P0*phi;
+    SelfAdjointEigenSolver<MatrixXd> ephiPphi(phiPphi);
+    Eigen::VectorXd mu = ephiPphi.eigenvalues().reverse();
+
+    double muximax= mu.maxCoeff();
+    if(muximax < xi.maxCoeff()){
+      muximax = xi.maxCoeff();
+    }
+    mu = mu/muximax;
+    xi = xi/muximax;
+    Eigen::MatrixXd AKA = rho*AKA1+(1-rho)*AKA2;
+
+    SelfAdjointEigenSolver<MatrixXd> eAKA(AKA);
+    Eigen::MatrixXd U2 = eAKA.eigenvectors().rowwise().reverse();
+    Eigen::MatrixXd ww= U2.transpose()*U1W;
+    int n = U2.rows();
+    Eigen::MatrixXd ww2 = ww.array().square();
+    Eigen::MatrixXd w1 = ww2.topRows(k);
+
+    Eigen::MatrixXd w2 = ww2.bottomRows(n-k).colwise().sum();
+
+    if(mu.size()<k){
+      Eigen::VectorXd munew=xi;
+      munew.head(mu.size())=mu;
+      munew.tail(k-mu.size()).array() = 0 ;
+      mu = munew;
+    }
+
+    int length_lamda = Lamdas.size();
+    int N = w2.size();
+    double lam;
+    Eigen::VectorXd lammu_con;
+    Eigen::VectorXd lammu_case;
+    Eigen::VectorXd Dn;
+    Eigen::VectorXd Nn;
+    Eigen::VectorXd DnonNn;
+    NumericVector temp;
+    NumericMatrix LR0_fixRho(N,length_lamda);
+
+
+    for(int i=0;i<length_lamda;i++){
+      lam = Lamdas[i];
+      lammu_con = 1/(1+lam*mu.array());
+      lammu_case = 1- lammu_con.array();
+      Dn = (lammu_con).transpose()*w1+w2;
+
+      Nn = lammu_case.transpose()*w1;
+      temp = nminuspx*(1+Nn.array()/Dn.array()).log()-
+        (1+(lam*mu).array()).log().sum();
+
+      LR0_fixRho(_,i) = ifelsetest_C(temp);
+    }
+    Map<MatrixXd> LR0_fixRhoE(as<Map<MatrixXd> >(LR0_fixRho));
+    LR0_allRho.col(j) = LR0_fixRhoE.rowwise().maxCoeff();
   }
-  Eigen::VectorXd xi = Kevalues.head(k);
-  Eigen::MatrixXd xis = xi.array().sqrt().matrix().asDiagonal();
-  Eigen::MatrixXd ximat = Kematrix.leftCols(k);
-  Eigen::MatrixXd phi=ximat*xis;
 
 
-
-
-return Rcpp::wrap(phi);
+return Rcpp::wrap(LR0_allRho);
 
                             }
 

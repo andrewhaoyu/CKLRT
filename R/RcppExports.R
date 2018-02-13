@@ -109,12 +109,18 @@ LR0_fixRho_C <- function(LamdasR, muR, w1R, w2R, nminuspx) {
     .Call('_Utility_LR0_fixRho_C', PACKAGE = 'Utility', LamdasR, muR, w1R, w2R, nminuspx)
 }
 
-#' transfirst
-#' @param rho rho value
+#' doubleloop
 #' @param K1R K1 matrix
 #' @param K2R K2 matrix
+#' @param P0R P0 matrix
+#' @param AR A matrix
+#' @param U1R U1 vector
+#' @param wR w matrix
+#' @param LamdasR Lamdas vector
+#' @param nminuspx n-px
+#' @param all_rho
 #' @export
-transfirst <- function(rho, K1R, K2R) {
-    .Call('_Utility_transfirst', PACKAGE = 'Utility', rho, K1R, K2R)
+doubleloop <- function(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR) {
+    .Call('_Utility_doubleloop', PACKAGE = 'Utility', K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)
 }
 

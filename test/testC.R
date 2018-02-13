@@ -1,5 +1,5 @@
-A.row <- 300
-A.col <- 297
+A.row <- 1000
+A.col <- 1000
 A <- matrix(rnorm(A.row*A.col),A.row,A.col)
 K <- matrix(rnorm(A.row*A.row),A.row,A.row)
 
