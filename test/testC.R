@@ -1,5 +1,5 @@
-A.row <- 1000
-A.col <- 1000
+A.row <- 3
+A.col <- 3
 A <- matrix(rnorm(A.row*A.col),A.row,A.col)
 K <- matrix(rnorm(A.row*A.row),A.row,A.row)
 
@@ -14,6 +14,7 @@ microbenchmark(
 )
 
 #######test the Eigen_C function
+
 K[upper_tri(K)] <- K[lower_tri(K)]
 temp <- t(A)%*%K%*%A
 result <- eigen(temp,symmetric = T)

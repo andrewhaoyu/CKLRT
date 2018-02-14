@@ -133,3 +133,4 @@ X = X[,c(1,2)]
   out = list(p.dir = p.dir,p.au1=p.au1,p.aud = p.aud, LR = LR)
 
 
+
