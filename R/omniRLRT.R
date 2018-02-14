@@ -61,7 +61,7 @@ omniRLRT = function(y, X,K1, K2, N = 10000, length.rho = 200, length.lambda = 21
 
     #For the first kernel
     LR0_allRho = matrix(NA, N, length.rho)
-    set.seed(123)
+    #set.seed(123)
     w = matrix(rnorm(N*(n-px)), n-px,N)
     LR0_fixRho = matrix(NA, N, length.lambda)
 
