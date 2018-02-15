@@ -114,6 +114,7 @@ X = X[,c(1,2)]
       if (length(mu) < k){mu = c(mu,rep(0, k - length(mu)))}
       if (length(xi) < k){xi = c(xi,rep(0, k - length(xi)))}
 
+
       for (i in 1:length.lambda){
         lam = Lambdas[i]
         Dn = colSums(w1/(1 + lam*mu))+ w2
