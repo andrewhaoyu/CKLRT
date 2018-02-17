@@ -101,6 +101,7 @@ X = X[,c(1,2)]
       mu = mu/max(mu, xi)
       xi = xi/max(mu,xi)
 
+
       AKA= t(A) %*% K %*% A
       eV = eigen(AKA, symmetric = T)
       u2 = eV$vector
