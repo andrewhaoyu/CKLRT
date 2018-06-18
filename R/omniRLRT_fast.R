@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' set.seed(123)
+#' set.seed(6)
 #' n = 200 # the number of observations
 #' X = rnorm(n) # the other covariates
 #' p = 2 # two snp in a gene will be simulated

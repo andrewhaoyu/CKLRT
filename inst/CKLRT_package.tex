@@ -260,22 +260,9 @@ inside 4.y is the simulated outcomes.
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(mgcv); }\KeywordTok{library}\NormalTok{(MASS); }\KeywordTok{library}\NormalTok{(nlme);}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Loading required package: nlme
-\end{verbatim}
-
-\begin{verbatim}
-## This is mgcv 1.8-17. For overview type 'help("mgcv-package")'.
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(compiler);}\KeywordTok{library}\NormalTok{(Rcpp);}\KeywordTok{library}\NormalTok{(RcppEigen)}
 \KeywordTok{library}\NormalTok{(CKLRT)}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{123}\NormalTok{)}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{6}\NormalTok{)}
 \NormalTok{n =}\StringTok{ }\DecValTok{200} \CommentTok{# the number of observations}
 \NormalTok{X =}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(n) }\CommentTok{# the other covariates}
 \NormalTok{p =}\StringTok{ }\DecValTok{2} \CommentTok{# two snp in a gene will be simulated}
@@ -290,13 +277,13 @@ inside 4.y is the simulated outcomes.
 
 \begin{verbatim}
 ## $p.dir
-## [1] 1
+## [1] 0.0248
 ## 
 ## $p.aud
-## [1] 1
+## [1] 0.02538226
 ## 
 ## $LR
-## [1] 0
+## [1] 3.408
 \end{verbatim}
 
 \begin{Shaded}
@@ -307,13 +294,13 @@ inside 4.y is the simulated outcomes.
 
 \begin{verbatim}
 ## $p.dir
-## [1] 0.406
+## [1] 0.0228
 ## 
 ## $p.aud
-## [1] 0.420533
+## [1] 0.01961945
 ## 
 ## $LR
-## [1] 0.07216923
+## [1] 3.701362
 \end{verbatim}
 
 \section{References}\label{references}
