@@ -24,7 +24,7 @@
 #' y = rnorm(n) + G[,1] * 0.3 observations
 #' omniRLRT_fast(y, X =  cbind(X, E),K1 = G %*% t(G),K2 = (G*E) %*% t(G * E))
 #' @importFrom MASS ginv
-#' @importFrom nlme lme
+#' @import nlme
 #' @import Rcpp
 #' @import RcppEigen
 #' @import mgcv
