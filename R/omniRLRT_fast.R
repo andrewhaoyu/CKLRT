@@ -5,11 +5,10 @@
 #' @param K1 the first kernel corresponding to the genetic main effect.
 #' @param K2 the second kernel corresponding to the genetic and environment interaction effect.
 #' @param N total number of randomly generated normal variables used to generate the emprical null distribution of LRT. Default value is 10,000.
-#' @param N.aud
 #' @param length.lambda the length of lambda. Dafult value is 200. The values of lambda are all more than 0.
 #' @param length.rho the length of rho. Default value is 21. The values of rho are between 0 and 1.
 #'
-#' @return
+#' @return the result is a list containing three elements. 1. p.dir is the p-value of restricted likelihood ratio test based on emprical distrition. 2. p.aud is the p-value by approximating the null distribution as a mixture of a point mass at zero with probability b and weighted chi square distribution with d degrees of freedom with probality of 1-b. 3. LR is the likelihood ratio test statistics.
 
 #' @export
 #'
@@ -157,10 +156,9 @@ omniRLRT_fast = function(y, X,K1, K2, N = 10000, length.rho = 200, length.lambda
     LR0 = apply(LR0_allRho, 1, max)
     LR0 = ifelse(LR0 > 0, LR0, 0)
     p.dir = mean(LR < LR0)
-    p.au1 = getp_au1(null = LR0, LR = LR)$p
     p.aud= getp_aud_estimate_pi_first(null = LR0, LR = LR)$p
   }
-  out = list(p.dir = p.dir,p.au1 = p.au1,p.aud = p.aud, LR = LR)
+  out = list(p.dir = p.dir,p.aud = p.aud, LR = LR)
   return(out)
 }
 

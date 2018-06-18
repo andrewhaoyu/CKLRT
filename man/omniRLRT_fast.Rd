@@ -22,6 +22,9 @@ omniRLRT_fast(y, X, K1, K2, N = 10000, length.rho = 200,
 
 \item{length.lambda}{the length of lambda. Dafult value is 200. The values of lambda are all more than 0.}
 }
+\value{
+the result is a list containing three elements. 1. p.dir is the p-value of restricted likelihood ratio test based on emprical distrition. 2. p.aud is the p-value by approximating the null distribution as a mixture of a point mass at zero with probability b and weighted chi square distribution with d degrees of freedom with probality of 1-b. 3. LR is the likelihood ratio test statistics.
+}
 \description{
 Composite kernel machine regression based restricted likelihood ratio test
 }

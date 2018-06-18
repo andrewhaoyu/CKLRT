@@ -23,7 +23,7 @@ omniLRT_fast(y, X, K1, K2, N = 10000, N.aud = 1000, length.lambda = 200,
 \item{length.rho}{: the length of rho. Default value is 21. The values of rho are between 0 and 1.}
 }
 \value{
-the result is a list containing four elements. 1. p.dir is the p-value of likelihood ratio test based on emprical distrition. 2. p.au1 is the p-value by approximating the null distrition as a mixture of a point mass and chi square with 1 degree of freedom. 3. p.aud is the p-value by approximating the null distribution as a mixture of a point mass at zero with probability b and weighted chi square distribution with d degrees of freedom with probality of 1-b. 4. LR is the likelihood ratio test statistics.
+the result is a list containing three elements. 1. p.dir is the p-value of likelihood ratio test based on emprical distrition. 2. p.aud is the p-value by approximating the null distribution as a mixture of a point mass at zero with probability b and weighted chi square distribution with d degrees of freedom with probality of 1-b. 3. LR is the likelihood ratio test statistics.
 }
 \description{
 Composite kernel machine regression based likelihood ratio test

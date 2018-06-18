@@ -1,6 +1,6 @@
 library(devtools)
 library(roxygen2)
-install_github("andrewhaoyu/Utility")
+install_github("andrewhaoyu/CKLRT")
 try(library(mgcv)) ; try(library(MASS)); library(nlme);
 library(compiler);library(Rcpp);library(RcppEigen)
 library(CKLRT)

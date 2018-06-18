@@ -5,11 +5,10 @@
 #' @param K1 : K1 is the first kernel corresponding to the genetic main effect.
 #' @param K2 : K2 is the second kernel corresponding to the genetic and environment interaction effect.
 #' @param N : N is th total number of randomly generated normal variables used to generate the emprical null distribution of LRT. Default value is 10,000.
-#' @param N.aud
 #' @param length.lambda : the length of lambda. Dafult value is 200. The values of lambda are all more than 0.
 #' @param length.rho : the length of rho. Default value is 21. The values of rho are between 0 and 1.
 #'
-#' @return the result is a list containing four elements. 1. p.dir is the p-value of likelihood ratio test based on emprical distrition. 2. p.au1 is the p-value by approximating the null distrition as a mixture of a point mass and chi square with 1 degree of freedom. 3. p.aud is the p-value by approximating the null distribution as a mixture of a point mass at zero with probability b and weighted chi square distribution with d degrees of freedom with probality of 1-b. 4. LR is the likelihood ratio test statistics.
+#' @return the result is a list containing three elements. 1. p.dir is the p-value of likelihood ratio test based on emprical distrition. 2. p.aud is the p-value by approximating the null distribution as a mixture of a point mass at zero with probability b and weighted chi square distribution with d degrees of freedom with probality of 1-b. 3. LR is the likelihood ratio test statistics.
 #' @export
 #'
 #' @examples
@@ -127,11 +126,10 @@ if(is.null(X)){
     LR0 = MatrixRowMax_C(LR0_allRho)
     LR0 = ifelse(LR0 > 0, LR0, 0)
     p.dir = mean(LR < LR0)
-    p.au1 = getp_au1(null = LR0, LR = LR)$p
     p.aud= getp_aud_estimate_pi_first(null = LR0, LR = LR)$p
 
   }
-  out = list(p.dir = p.dir,p.au1=p.au1,p.aud = p.aud, LR = LR)
+  out = list(p.dir = p.dir,p.aud = p.aud, LR = LR)
   return(out)
 }
 
