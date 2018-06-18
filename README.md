@@ -8,7 +8,7 @@ Composite Kernel Machine Regression based on Likelihood Ratio Test (CKLRT): in t
 Usage
 =======
 
-[The 'LEP' vignette](https://github.com/daviddaigithub/LEP/blob/master/inst/doc/LEP_package.pdf) will provide a good start point for the genetic analysis using LEP package.
+[The 'CKLRT' vignette](https://github.com/andrewhaoyu/CKLRT/blob/master/inst/CKLRT_package.pdf) will provide a good start point for using CKLRT package.
 
 
 Development 
