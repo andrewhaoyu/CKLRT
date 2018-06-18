@@ -5,7 +5,7 @@
 #' @param LR
 #'
 #' @return
-#' @export
+
 #'
 #' @examples
 getp_aud_estimate_pi_first = function(null, LR){

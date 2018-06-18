@@ -9,6 +9,9 @@ getp_aud_estimate_pi_first(null, LR)
 \arguments{
 \item{LR}{}
 }
+\value{
+
+}
 \description{
 Title
 }

@@ -6,7 +6,7 @@
 #' @param LR
 #'
 #' @return
-#' @export
+
 #'
 #' @examples
 getp_au1 = function(null, LR){

@@ -9,6 +9,9 @@ getp_au1(null, LR)
 \arguments{
 \item{LR}{}
 }
+\value{
+
+}
 \description{
 Title
 }

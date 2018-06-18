@@ -5,14 +5,14 @@
 #' @param As A sysmetric matrix
 #' @export
 Eigen_C <- function(As) {
-    .Call('_Utility_Eigen_C', PACKAGE = 'Utility', As)
+    .Call('_CKLRT_Eigen_C', PACKAGE = 'CKLRT', As)
 }
 
 #' Eigen_C_value
 #' @param As A sysmetric matrix
 #' @export
 Eigen_C_value <- function(As) {
-    .Call('_Utility_Eigen_C_value', PACKAGE = 'Utility', As)
+    .Call('_CKLRT_Eigen_C_value', PACKAGE = 'CKLRT', As)
 }
 
 #' MatMult_C
@@ -20,35 +20,35 @@ Eigen_C_value <- function(As) {
 #' @param B second matrix
 #' @export
 MatMult_C <- function(A, B) {
-    .Call('_Utility_MatMult_C', PACKAGE = 'Utility', A, B)
+    .Call('_CKLRT_MatMult_C', PACKAGE = 'CKLRT', A, B)
 }
 
 #' Sum_C
 #' @param AA Vector
 #' @export
 Sum_C <- function(AA) {
-    .Call('_Utility_Sum_C', PACKAGE = 'Utility', AA)
+    .Call('_CKLRT_Sum_C', PACKAGE = 'CKLRT', AA)
 }
 
 #' ColSum_C
 #' @param AA Matrix
 #' @export
 ColSum_C <- function(AA) {
-    .Call('_Utility_ColSum_C', PACKAGE = 'Utility', AA)
+    .Call('_CKLRT_ColSum_C', PACKAGE = 'CKLRT', AA)
 }
 
 #' MatrixRowMax_C
 #' @param AA Matrix
 #' @export
 MatrixRowMax_C <- function(AA) {
-    .Call('_Utility_MatrixRowMax_C', PACKAGE = 'Utility', AA)
+    .Call('_CKLRT_MatrixRowMax_C', PACKAGE = 'CKLRT', AA)
 }
 
 #' Elementwisesquare_C
 #' @param AA Matrix
 #' @export
 Elementwisesquare_C <- function(AA) {
-    .Call('_Utility_Elementwisesquare_C', PACKAGE = 'Utility', AA)
+    .Call('_CKLRT_Elementwisesquare_C', PACKAGE = 'CKLRT', AA)
 }
 
 #' VecMultMat_C
@@ -56,7 +56,7 @@ Elementwisesquare_C <- function(AA) {
 #' @param B Matrix
 #' @export
 VecMultMat_C <- function(A, B) {
-    .Call('_Utility_VecMultMat_C', PACKAGE = 'Utility', A, B)
+    .Call('_CKLRT_VecMultMat_C', PACKAGE = 'CKLRT', A, B)
 }
 
 #' Vecplus_C
@@ -64,7 +64,7 @@ VecMultMat_C <- function(A, B) {
 #' @param B Vector
 #' @export
 Vecplus_C <- function(A, B) {
-    .Call('_Utility_Vecplus_C', PACKAGE = 'Utility', A, B)
+    .Call('_CKLRT_Vecplus_C', PACKAGE = 'CKLRT', A, B)
 }
 
 #' ColSumtwomatrix_C
@@ -72,14 +72,14 @@ Vecplus_C <- function(A, B) {
 #' @param BB Matrix
 #' @export
 ColSumtwomatrix_C <- function(AA, BB) {
-    .Call('_Utility_ColSumtwomatrix_C', PACKAGE = 'Utility', AA, BB)
+    .Call('_CKLRT_ColSumtwomatrix_C', PACKAGE = 'CKLRT', AA, BB)
 }
 
 #' ifelsetest_C
 #' @param x Vector
 #' @export
 ifelsetest_C <- function(x) {
-    .Call('_Utility_ifelsetest_C', PACKAGE = 'Utility', x)
+    .Call('_CKLRT_ifelsetest_C', PACKAGE = 'CKLRT', x)
 }
 
 #' MatrixPlus_C
@@ -87,7 +87,7 @@ ifelsetest_C <- function(x) {
 #' @param B Second Matrix
 #' @export
 MatrixPlus_C <- function(A, B) {
-    .Call('_Utility_MatrixPlus_C', PACKAGE = 'Utility', A, B)
+    .Call('_CKLRT_MatrixPlus_C', PACKAGE = 'CKLRT', A, B)
 }
 
 #' NumxMatrix_C
@@ -95,7 +95,7 @@ MatrixPlus_C <- function(A, B) {
 #' @param B Matrix
 #' @export
 NumxMatrix_C <- function(A, B) {
-    .Call('_Utility_NumxMatrix_C', PACKAGE = 'Utility', A, B)
+    .Call('_CKLRT_NumxMatrix_C', PACKAGE = 'CKLRT', A, B)
 }
 
 #' LR0_fixRho_C
@@ -106,7 +106,7 @@ NumxMatrix_C <- function(A, B) {
 #' @param nminuspx n-px
 #' @export
 LR0_fixRho_C <- function(LamdasR, muR, w1R, w2R, nminuspx) {
-    .Call('_Utility_LR0_fixRho_C', PACKAGE = 'Utility', LamdasR, muR, w1R, w2R, nminuspx)
+    .Call('_CKLRT_LR0_fixRho_C', PACKAGE = 'CKLRT', LamdasR, muR, w1R, w2R, nminuspx)
 }
 
 #' doubleloop
@@ -121,7 +121,7 @@ LR0_fixRho_C <- function(LamdasR, muR, w1R, w2R, nminuspx) {
 #' @param all_rho
 #' @export
 doubleloop <- function(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR) {
-    .Call('_Utility_doubleloop', PACKAGE = 'Utility', K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)
+    .Call('_CKLRT_doubleloop', PACKAGE = 'CKLRT', K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)
 }
 
 #' LR0_fixRho_LRT_C
@@ -132,7 +132,7 @@ doubleloop <- function(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, L
 #' @param nminuspx n-px
 #' @export
 LR0_fixRho_LRT_C <- function(LamdasR, muR, w1R, w2R, nminuspx, xiR) {
-    .Call('_Utility_LR0_fixRho_LRT_C', PACKAGE = 'Utility', LamdasR, muR, w1R, w2R, nminuspx, xiR)
+    .Call('_CKLRT_LR0_fixRho_LRT_C', PACKAGE = 'CKLRT', LamdasR, muR, w1R, w2R, nminuspx, xiR)
 }
 
 #' doubleloop_LRT
@@ -148,6 +148,6 @@ LR0_fixRho_LRT_C <- function(LamdasR, muR, w1R, w2R, nminuspx, xiR) {
 #' @param LR0_allRhoR LR0_allRhomatrix
 #' @export
 doubleloop_LRT <- function(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR) {
-    .Call('_Utility_doubleloop_LRT', PACKAGE = 'Utility', K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)
+    .Call('_CKLRT_doubleloop_LRT', PACKAGE = 'CKLRT', K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)
 }
 

@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // Eigen_C
 List Eigen_C(NumericMatrix As);
-RcppExport SEXP _Utility_Eigen_C(SEXP AsSEXP) {
+RcppExport SEXP _CKLRT_Eigen_C(SEXP AsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -19,7 +19,7 @@ END_RCPP
 }
 // Eigen_C_value
 Eigen::VectorXd Eigen_C_value(NumericMatrix As);
-RcppExport SEXP _Utility_Eigen_C_value(SEXP AsSEXP) {
+RcppExport SEXP _CKLRT_Eigen_C_value(SEXP AsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -30,7 +30,7 @@ END_RCPP
 }
 // MatMult_C
 SEXP MatMult_C(Eigen::MatrixXd A, Eigen::MatrixXd B);
-RcppExport SEXP _Utility_MatMult_C(SEXP ASEXP, SEXP BSEXP) {
+RcppExport SEXP _CKLRT_MatMult_C(SEXP ASEXP, SEXP BSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -42,7 +42,7 @@ END_RCPP
 }
 // Sum_C
 double Sum_C(NumericVector AA);
-RcppExport SEXP _Utility_Sum_C(SEXP AASEXP) {
+RcppExport SEXP _CKLRT_Sum_C(SEXP AASEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -53,7 +53,7 @@ END_RCPP
 }
 // ColSum_C
 NumericVector ColSum_C(NumericMatrix AA);
-RcppExport SEXP _Utility_ColSum_C(SEXP AASEXP) {
+RcppExport SEXP _CKLRT_ColSum_C(SEXP AASEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -64,7 +64,7 @@ END_RCPP
 }
 // MatrixRowMax_C
 NumericVector MatrixRowMax_C(NumericMatrix AA);
-RcppExport SEXP _Utility_MatrixRowMax_C(SEXP AASEXP) {
+RcppExport SEXP _CKLRT_MatrixRowMax_C(SEXP AASEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -75,7 +75,7 @@ END_RCPP
 }
 // Elementwisesquare_C
 NumericVector Elementwisesquare_C(NumericMatrix AA);
-RcppExport SEXP _Utility_Elementwisesquare_C(SEXP AASEXP) {
+RcppExport SEXP _CKLRT_Elementwisesquare_C(SEXP AASEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -86,7 +86,7 @@ END_RCPP
 }
 // VecMultMat_C
 NumericVector VecMultMat_C(Eigen::VectorXd A, Eigen::MatrixXd B);
-RcppExport SEXP _Utility_VecMultMat_C(SEXP ASEXP, SEXP BSEXP) {
+RcppExport SEXP _CKLRT_VecMultMat_C(SEXP ASEXP, SEXP BSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -98,7 +98,7 @@ END_RCPP
 }
 // Vecplus_C
 NumericVector Vecplus_C(Eigen::VectorXd A, Eigen::VectorXd B);
-RcppExport SEXP _Utility_Vecplus_C(SEXP ASEXP, SEXP BSEXP) {
+RcppExport SEXP _CKLRT_Vecplus_C(SEXP ASEXP, SEXP BSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -110,7 +110,7 @@ END_RCPP
 }
 // ColSumtwomatrix_C
 NumericVector ColSumtwomatrix_C(NumericMatrix AA, NumericMatrix BB);
-RcppExport SEXP _Utility_ColSumtwomatrix_C(SEXP AASEXP, SEXP BBSEXP) {
+RcppExport SEXP _CKLRT_ColSumtwomatrix_C(SEXP AASEXP, SEXP BBSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -122,7 +122,7 @@ END_RCPP
 }
 // ifelsetest_C
 NumericVector ifelsetest_C(NumericVector x);
-RcppExport SEXP _Utility_ifelsetest_C(SEXP xSEXP) {
+RcppExport SEXP _CKLRT_ifelsetest_C(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -133,7 +133,7 @@ END_RCPP
 }
 // MatrixPlus_C
 SEXP MatrixPlus_C(Eigen::MatrixXd A, Eigen::MatrixXd B);
-RcppExport SEXP _Utility_MatrixPlus_C(SEXP ASEXP, SEXP BSEXP) {
+RcppExport SEXP _CKLRT_MatrixPlus_C(SEXP ASEXP, SEXP BSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -145,7 +145,7 @@ END_RCPP
 }
 // NumxMatrix_C
 SEXP NumxMatrix_C(double A, Eigen::MatrixXd B);
-RcppExport SEXP _Utility_NumxMatrix_C(SEXP ASEXP, SEXP BSEXP) {
+RcppExport SEXP _CKLRT_NumxMatrix_C(SEXP ASEXP, SEXP BSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -157,7 +157,7 @@ END_RCPP
 }
 // LR0_fixRho_C
 NumericMatrix LR0_fixRho_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericMatrix w2R, int nminuspx);
-RcppExport SEXP _Utility_LR0_fixRho_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP) {
+RcppExport SEXP _CKLRT_LR0_fixRho_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -172,7 +172,7 @@ END_RCPP
 }
 // doubleloop
 NumericMatrix doubleloop(NumericMatrix K1R, NumericMatrix K2R, NumericMatrix P0R, NumericMatrix AR, NumericMatrix U1R, NumericMatrix wR, NumericVector LamdasR, int nminuspx, NumericVector all_rho, NumericMatrix LR0_allRhoR);
-RcppExport SEXP _Utility_doubleloop(SEXP K1RSEXP, SEXP K2RSEXP, SEXP P0RSEXP, SEXP ARSEXP, SEXP U1RSEXP, SEXP wRSEXP, SEXP LamdasRSEXP, SEXP nminuspxSEXP, SEXP all_rhoSEXP, SEXP LR0_allRhoRSEXP) {
+RcppExport SEXP _CKLRT_doubleloop(SEXP K1RSEXP, SEXP K2RSEXP, SEXP P0RSEXP, SEXP ARSEXP, SEXP U1RSEXP, SEXP wRSEXP, SEXP LamdasRSEXP, SEXP nminuspxSEXP, SEXP all_rhoSEXP, SEXP LR0_allRhoRSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -192,7 +192,7 @@ END_RCPP
 }
 // LR0_fixRho_LRT_C
 NumericMatrix LR0_fixRho_LRT_C(NumericVector LamdasR, NumericVector muR, NumericMatrix w1R, NumericMatrix w2R, int nminuspx, NumericVector xiR);
-RcppExport SEXP _Utility_LR0_fixRho_LRT_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP, SEXP xiRSEXP) {
+RcppExport SEXP _CKLRT_LR0_fixRho_LRT_C(SEXP LamdasRSEXP, SEXP muRSEXP, SEXP w1RSEXP, SEXP w2RSEXP, SEXP nminuspxSEXP, SEXP xiRSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -208,7 +208,7 @@ END_RCPP
 }
 // doubleloop_LRT
 NumericMatrix doubleloop_LRT(NumericMatrix K1R, NumericMatrix K2R, NumericMatrix P0R, NumericMatrix AR, NumericMatrix U1R, NumericMatrix wR, NumericVector LamdasR, int nminuspx, NumericVector all_rho, NumericMatrix LR0_allRhoR);
-RcppExport SEXP _Utility_doubleloop_LRT(SEXP K1RSEXP, SEXP K2RSEXP, SEXP P0RSEXP, SEXP ARSEXP, SEXP U1RSEXP, SEXP wRSEXP, SEXP LamdasRSEXP, SEXP nminuspxSEXP, SEXP all_rhoSEXP, SEXP LR0_allRhoRSEXP) {
+RcppExport SEXP _CKLRT_doubleloop_LRT(SEXP K1RSEXP, SEXP K2RSEXP, SEXP P0RSEXP, SEXP ARSEXP, SEXP U1RSEXP, SEXP wRSEXP, SEXP LamdasRSEXP, SEXP nminuspxSEXP, SEXP all_rhoSEXP, SEXP LR0_allRhoRSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -228,27 +228,27 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_Utility_Eigen_C", (DL_FUNC) &_Utility_Eigen_C, 1},
-    {"_Utility_Eigen_C_value", (DL_FUNC) &_Utility_Eigen_C_value, 1},
-    {"_Utility_MatMult_C", (DL_FUNC) &_Utility_MatMult_C, 2},
-    {"_Utility_Sum_C", (DL_FUNC) &_Utility_Sum_C, 1},
-    {"_Utility_ColSum_C", (DL_FUNC) &_Utility_ColSum_C, 1},
-    {"_Utility_MatrixRowMax_C", (DL_FUNC) &_Utility_MatrixRowMax_C, 1},
-    {"_Utility_Elementwisesquare_C", (DL_FUNC) &_Utility_Elementwisesquare_C, 1},
-    {"_Utility_VecMultMat_C", (DL_FUNC) &_Utility_VecMultMat_C, 2},
-    {"_Utility_Vecplus_C", (DL_FUNC) &_Utility_Vecplus_C, 2},
-    {"_Utility_ColSumtwomatrix_C", (DL_FUNC) &_Utility_ColSumtwomatrix_C, 2},
-    {"_Utility_ifelsetest_C", (DL_FUNC) &_Utility_ifelsetest_C, 1},
-    {"_Utility_MatrixPlus_C", (DL_FUNC) &_Utility_MatrixPlus_C, 2},
-    {"_Utility_NumxMatrix_C", (DL_FUNC) &_Utility_NumxMatrix_C, 2},
-    {"_Utility_LR0_fixRho_C", (DL_FUNC) &_Utility_LR0_fixRho_C, 5},
-    {"_Utility_doubleloop", (DL_FUNC) &_Utility_doubleloop, 10},
-    {"_Utility_LR0_fixRho_LRT_C", (DL_FUNC) &_Utility_LR0_fixRho_LRT_C, 6},
-    {"_Utility_doubleloop_LRT", (DL_FUNC) &_Utility_doubleloop_LRT, 10},
+    {"_CKLRT_Eigen_C", (DL_FUNC) &_CKLRT_Eigen_C, 1},
+    {"_CKLRT_Eigen_C_value", (DL_FUNC) &_CKLRT_Eigen_C_value, 1},
+    {"_CKLRT_MatMult_C", (DL_FUNC) &_CKLRT_MatMult_C, 2},
+    {"_CKLRT_Sum_C", (DL_FUNC) &_CKLRT_Sum_C, 1},
+    {"_CKLRT_ColSum_C", (DL_FUNC) &_CKLRT_ColSum_C, 1},
+    {"_CKLRT_MatrixRowMax_C", (DL_FUNC) &_CKLRT_MatrixRowMax_C, 1},
+    {"_CKLRT_Elementwisesquare_C", (DL_FUNC) &_CKLRT_Elementwisesquare_C, 1},
+    {"_CKLRT_VecMultMat_C", (DL_FUNC) &_CKLRT_VecMultMat_C, 2},
+    {"_CKLRT_Vecplus_C", (DL_FUNC) &_CKLRT_Vecplus_C, 2},
+    {"_CKLRT_ColSumtwomatrix_C", (DL_FUNC) &_CKLRT_ColSumtwomatrix_C, 2},
+    {"_CKLRT_ifelsetest_C", (DL_FUNC) &_CKLRT_ifelsetest_C, 1},
+    {"_CKLRT_MatrixPlus_C", (DL_FUNC) &_CKLRT_MatrixPlus_C, 2},
+    {"_CKLRT_NumxMatrix_C", (DL_FUNC) &_CKLRT_NumxMatrix_C, 2},
+    {"_CKLRT_LR0_fixRho_C", (DL_FUNC) &_CKLRT_LR0_fixRho_C, 5},
+    {"_CKLRT_doubleloop", (DL_FUNC) &_CKLRT_doubleloop, 10},
+    {"_CKLRT_LR0_fixRho_LRT_C", (DL_FUNC) &_CKLRT_LR0_fixRho_LRT_C, 6},
+    {"_CKLRT_doubleloop_LRT", (DL_FUNC) &_CKLRT_doubleloop_LRT, 10},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_Utility(DllInfo *dll) {
+RcppExport void R_init_CKLRT(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
