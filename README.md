@@ -1,8 +1,6 @@
 CKLRT
 =======
 
-LEP is a statistical approach to integrating individual level genotype data and summary statistics by LEveraging Pleiotropy. 'LEP' R package provides computationally efficient and user friendly interface to fit and evaluate the LEP model. It accepts both the R-type data  and binary plink files.
-
 Composite Kernel Machine Regression based on Likelihood Ratio Test (CKLRT): in this package, we develop a kernel machine regression framework to model the overall genetic effect of a SNP-set, considering the possible GE interaction. Specifically, we use a composite kernel to specify the overall genetic effect via a nonparametric function and we model additional covariates parametrically within the regression framework. The composite kernel is constructed as a weighted average of two kernels, one corresponding to the genetic main effect and one corresponding to the GE interaction effect. We propose a likelihood ratio test (LRT) and a restricted likelihood ratio test (RLRT) for statistical significance. We derive a Monte Carlo approach for the finite sample distributions of LRT and RLRT statistics.
 
 Usage
