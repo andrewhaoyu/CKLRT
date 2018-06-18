@@ -255,7 +255,7 @@ github. The package can be loaded with the following command:
 In this vegnette, we will decomstrate the methods with a simple example.
 1. X present other covariates we want to adjust. 2. E represents the
 environment variable. 3. G is is the genotype matrix with two SNPs
-inside 4.y is the simulated outcomes.
+inside 4. y is the simulated outcomes.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -271,6 +271,7 @@ inside 4.y is the simulated outcomes.
 \NormalTok{G =}\StringTok{ }\KeywordTok{matrix}\NormalTok{(G, n,p) }\CommentTok{#genetic matrix}
 \NormalTok{E =}\StringTok{ }\NormalTok{(}\KeywordTok{runif}\NormalTok{(n) }\OperatorTok{<}\StringTok{ }\FloatTok{0.5}\NormalTok{)}\OperatorTok{^}\DecValTok{2} \CommentTok{#enviroment effect}
 \NormalTok{y =}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(n) }\OperatorTok{+}\StringTok{ }\NormalTok{G[,}\DecValTok{1}\NormalTok{] }\OperatorTok{*}\StringTok{ }\FloatTok{0.3} \CommentTok{#observations}
+\CommentTok{#apply the likelihood ratio test}
 \KeywordTok{omniLRT_fast}\NormalTok{(y, }\DataTypeTok{X =}  \KeywordTok{cbind}\NormalTok{(X, E),}\DataTypeTok{K1 =}\NormalTok{ G }\OperatorTok{%*%}\StringTok{ }\KeywordTok{t}\NormalTok{(G),}\DataTypeTok{K2 =}\NormalTok{ (G}\OperatorTok{*}\NormalTok{E) }\OperatorTok{%*%}\StringTok{ }\KeywordTok{t}\NormalTok{(G }\OperatorTok{*}\StringTok{ }\NormalTok{E))}
 \end{Highlighting}
 \end{Shaded}
@@ -288,6 +289,7 @@ inside 4.y is the simulated outcomes.
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\CommentTok{#apply the restricted likelihood ratio test}
 \KeywordTok{omniRLRT_fast}\NormalTok{(y, }\DataTypeTok{X =}  \KeywordTok{cbind}\NormalTok{(X, E),}\DataTypeTok{K1 =}\NormalTok{ G }\OperatorTok{%*%}\StringTok{ }\KeywordTok{t}\NormalTok{(G),}\DataTypeTok{K2 =}\NormalTok{ (G}\OperatorTok{*}\NormalTok{E) }\OperatorTok{%*%}\StringTok{ }\KeywordTok{t}\NormalTok{(G }\OperatorTok{*}\StringTok{ }\NormalTok{E))}
 \end{Highlighting}
 \end{Shaded}
@@ -302,6 +304,13 @@ inside 4.y is the simulated outcomes.
 ## $LR
 ## [1] 3.701362
 \end{verbatim}
+
+The results of the function contain three elements: 1. p.dir is the
+p-value of likelihood ratio test based on emprical distrition. 2. p.aud
+is the p-value by approximating the null distribution as a mixture of a
+point mass at zero with probability b and weighted chi square
+distribution with d degrees of freedom with probality of 1-b. 3. LR is
+the likelihood ratio test statistics.
 
 \section{References}\label{references}
 

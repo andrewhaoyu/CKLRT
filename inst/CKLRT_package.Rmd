@@ -45,7 +45,7 @@ library(CKLRT)
 ```
 
 # Example
-In this vegnette, we will decomstrate the methods with a simple example. 1. X present other covariates we want to adjust. 2. E represents the environment variable. 3. G is is the genotype matrix with two SNPs inside 4.y is the simulated outcomes.  
+In this vegnette, we will decomstrate the methods with a simple example. 1. X present other covariates we want to adjust. 2. E represents the environment variable. 3. G is is the genotype matrix with two SNPs inside 4. y is the simulated outcomes. 
 ```{r, include=T,echo=T,cache=T}
 library(mgcv); library(MASS); library(nlme);
 library(compiler);library(Rcpp);library(RcppEigen)
@@ -59,9 +59,13 @@ G = G + runif(n*p) < 0.5
 G = matrix(G, n,p) #genetic matrix
 E = (runif(n) < 0.5)^2 #enviroment effect
 y = rnorm(n) + G[,1] * 0.3 #observations
+#apply the likelihood ratio test
 omniLRT_fast(y, X =  cbind(X, E),K1 = G %*% t(G),K2 = (G*E) %*% t(G * E))
+#apply the restricted likelihood ratio test
 omniRLRT_fast(y, X =  cbind(X, E),K1 = G %*% t(G),K2 = (G*E) %*% t(G * E))
 ```
+The results of the function contain three elements: 1. p.dir is the p-value of likelihood ratio test based on emprical distrition. 2. p.aud is the p-value by approximating the null distribution as a mixture of a point mass at zero with probability b and weighted chi square distribution with d degrees of freedom with probality of 1-b. 3. LR is the likelihood ratio test statistics.
+
 # References
 1. N. Zhao, H. Zhang, J. Clark, A. Maity, M. Wu. Composite Kernel Machine Regression based on Likelihood Ratio Test with Application for Combined Genetic and Gene-environment Interaction Effect (Submitted)
 
