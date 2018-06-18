@@ -27,7 +27,7 @@ time3 <- proc.time()
 omniLRT(y, X = cbind(X, E),K1 = G %*% t(G), K2 = (G*E) %*% t(G * E) , N = 10000, length.rho = 200, length.lambda = 21)
 time3 <- proc.time()-time3
 time4 <- proc.time()
-omniLRT_fast(y, X = NULL,K1 = G %*% t(G), K2 = (G*E) %*% t(G * E) , N = 10000, length.rho = 200, length.lambda = 21)
+omniLRT_fast(y, X = cbind(X,E),K1 = G %*% t(G), K2 = (G*E) %*% t(G * E) , N = 10000, length.rho = 200, length.lambda = 21)
 time4 <- proc.time()-time4
 print(time3)
 print(time4)

@@ -22,6 +22,14 @@
 #' E = (runif(n) < 0.5)^2 #enviroment effect
 #' y = rnorm(n) + G[,1] * 0.3 observations
 #' omniLRT_fast(y, X =  cbind(X, E),K1 = G %*% t(G),K2 = (G*E) %*% t(G * E))
+#' @importFrom MASS ginv
+#' @importFrom nlme lme
+#' @import Rcpp
+#' @import RcppEigen
+#' @import mgcv
+#' @import compiler
+
+
 
 omniLRT_fast = function(y, X,K1, K2, N = 10000, N.aud = 1000, length.lambda = 200, length.rho = 21){
   method = "ML"

@@ -17,11 +17,11 @@ Imports:
  compiler
 LinkingTo:
   RcppEigen,
- Rcpp,
- mgcv,
- MASS,
- nlme,
- compiler
+   Rcpp,
+   mgcv,
+   MASS,
+   nlme,
+   compiler
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
