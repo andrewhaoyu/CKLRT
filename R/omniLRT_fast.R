@@ -20,7 +20,7 @@
 #' G = G + runif(n*p) < 0.5
 #' G = matrix(G, n,p) #genetic matrix
 #' E = (runif(n) < 0.5)^2 #enviroment effect
-#' y = rnorm(n) + G[,1] * 0.3 observations
+#' y = rnorm(n) + G[,1] * 0.3 #observations
 #' omniLRT_fast(y, X =  cbind(X, E),K1 = G %*% t(G),K2 = (G*E) %*% t(G * E))
 #' @importFrom MASS ginv
 #' @import nlme
