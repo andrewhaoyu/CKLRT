@@ -11,9 +11,6 @@ getp_au1(null, LR)
 
 \item{LR}{the likelihood of the data}
 }
-\value{
-
-}
 \description{
 Title
 }

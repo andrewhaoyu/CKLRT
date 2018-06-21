@@ -23,7 +23,9 @@ doubleloop(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)
 
 \item{nminuspx}{n-px}
 
-\item{all_rho}{}
+\item{all_rho}{the rho vector}
+
+\item{LR0_allRhoR}{the matrix of likelihood ratio}
 }
 \description{
 doubleloop

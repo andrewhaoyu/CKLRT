@@ -13,9 +13,6 @@ getp_Qreg_logP(null, LR, qmax = 1)
 
 \item{qmax}{quantile of likelihood ratio vector. Most time put as 1, all the likelihood ratio vector under the null hypothesis will be used}
 }
-\value{
-
-}
 \description{
 Title
 }

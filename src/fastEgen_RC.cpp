@@ -61,7 +61,6 @@ NumericVector ColSum_C(NumericMatrix AA){
 
 //' MatrixRowMax_C
 //' @param AA Matrix
-
 // [[Rcpp::export]]
 NumericVector MatrixRowMax_C(NumericMatrix AA){
   const Map<MatrixXd> A(as<Map<MatrixXd> >(AA));
@@ -308,7 +307,7 @@ return Rcpp::wrap(LR0_allRho);
 //' @param w1R w1 vector
 //' @param w2R w2 vector
 //' @param nminuspx n-px
-//' @param xiR vector
+//' @param xiR  Vector
 // [[Rcpp::export]]
 NumericMatrix LR0_fixRho_LRT_C(NumericVector LamdasR,
                            NumericVector muR,

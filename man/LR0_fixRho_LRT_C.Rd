@@ -16,6 +16,8 @@ LR0_fixRho_LRT_C(LamdasR, muR, w1R, w2R, nminuspx, xiR)
 \item{w2R}{w2 vector}
 
 \item{nminuspx}{n-px}
+
+\item{xiR}{Vector}
 }
 \description{
 LR0_fixRho_LRT_C
