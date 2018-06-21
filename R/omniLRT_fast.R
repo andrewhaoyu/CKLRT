@@ -31,7 +31,7 @@
 
 
 
-omniLRT_fast = function(y, X,K1, K2, N = 10000, N.aud = 1000, length.lambda = 200, length.rho = 21){
+omniLRT_fast = function(y, X,K1, K2, N = 10000,length.lambda = 200, length.rho = 21){
   method = "ML"
   Lambdas = exp(seq(from = -12, to = 12, length.out = length.lambda))
   all_rho = seq(from = 0,to = 1, length.out = length.rho)

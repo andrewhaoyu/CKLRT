@@ -119,7 +119,7 @@ LR0_fixRho_C <- function(LamdasR, muR, w1R, w2R, nminuspx) {
 #' @param LamdasR Lamdas vector
 #' @param nminuspx n-px
 #' @param all_rho
-#' @export
+#'
 doubleloop <- function(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR) {
     .Call('_CKLRT_doubleloop', PACKAGE = 'CKLRT', K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)
 }

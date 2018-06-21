@@ -14,7 +14,8 @@ Imports:
  mgcv,
  MASS,
  nlme,
- compiler
+ compiler,
+ stats
 LinkingTo:
   RcppEigen,
    Rcpp,

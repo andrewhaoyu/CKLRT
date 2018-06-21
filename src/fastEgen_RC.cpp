@@ -11,7 +11,6 @@ typedef  Map<VectorXd>  MapVecd;
 using namespace Rcpp;
 //' Eigen_C
 //' @param As A sysmetric matrix
-//' @export
 //[[Rcpp::export]]
 
 List Eigen_C(NumericMatrix As){
@@ -24,7 +23,6 @@ List Eigen_C(NumericMatrix As){
 
 //' Eigen_C_value
 //' @param As A sysmetric matrix
-//' @export
 //[[Rcpp::export]]
 Eigen::VectorXd Eigen_C_value(NumericMatrix As){
   const Map<MatrixXd> A(as<Map<MatrixXd> >(As));
@@ -35,7 +33,6 @@ Eigen::VectorXd Eigen_C_value(NumericMatrix As){
 //' MatMult_C
 //' @param A first matrix
 //' @param B second matrix
-//' @export
 // [[Rcpp::export]]
 SEXP MatMult_C(Eigen::MatrixXd A, Eigen::MatrixXd B){
   Eigen::MatrixXd C = A * B;
@@ -45,7 +42,6 @@ SEXP MatMult_C(Eigen::MatrixXd A, Eigen::MatrixXd B){
 
 //' Sum_C
 //' @param AA Vector
-//' @export
 // [[Rcpp::export]]
 double Sum_C(NumericVector AA){
   const MapVecd A(as<MapVecd>(AA));
@@ -55,7 +51,6 @@ double Sum_C(NumericVector AA){
 
 //' ColSum_C
 //' @param AA Matrix
-//' @export
 // [[Rcpp::export]]
 NumericVector ColSum_C(NumericMatrix AA){
   const Map<MatrixXd> A(as<Map<MatrixXd> >(AA));
@@ -66,7 +61,7 @@ NumericVector ColSum_C(NumericMatrix AA){
 
 //' MatrixRowMax_C
 //' @param AA Matrix
-//' @export
+
 // [[Rcpp::export]]
 NumericVector MatrixRowMax_C(NumericMatrix AA){
   const Map<MatrixXd> A(as<Map<MatrixXd> >(AA));
@@ -79,7 +74,6 @@ NumericVector MatrixRowMax_C(NumericMatrix AA){
 
 //' Elementwisesquare_C
 //' @param AA Matrix
-//' @export
 // [[Rcpp::export]]
 NumericVector Elementwisesquare_C(NumericMatrix AA){
   const Map<MatrixXd> A(as<Map<MatrixXd> >(AA));
@@ -94,7 +88,6 @@ NumericVector Elementwisesquare_C(NumericMatrix AA){
 //' VecMultMat_C
 //' @param A Vector
 //' @param B Matrix
-//' @export
 // [[Rcpp::export]]
 NumericVector VecMultMat_C(Eigen::VectorXd A,Eigen::MatrixXd  B){
   Eigen::VectorXd C = A.transpose()*B;
@@ -104,7 +97,6 @@ NumericVector VecMultMat_C(Eigen::VectorXd A,Eigen::MatrixXd  B){
 //' Vecplus_C
 //' @param A Vector
 //' @param B Vector
-//' @export
 // [[Rcpp::export]]
 NumericVector Vecplus_C(Eigen::VectorXd A,Eigen::VectorXd B){
   Eigen::VectorXd C = A+B;
@@ -115,7 +107,6 @@ NumericVector Vecplus_C(Eigen::VectorXd A,Eigen::VectorXd B){
 //' ColSumtwomatrix_C
 //' @param AA Matrix
 //' @param BB Matrix
-//' @export
 // [[Rcpp::export]]
 NumericVector ColSumtwomatrix_C(NumericMatrix AA,NumericMatrix BB){
   NumericVector result;
@@ -125,7 +116,6 @@ NumericVector ColSumtwomatrix_C(NumericMatrix AA,NumericMatrix BB){
 
 //' ifelsetest_C
 //' @param x Vector
-//' @export
 //[[Rcpp::export]]
 NumericVector ifelsetest_C( NumericVector x){
   return Rcpp::wrap( ifelse( x < 0, 0, x ));
@@ -136,7 +126,6 @@ NumericVector ifelsetest_C( NumericVector x){
 //' MatrixPlus_C
 //' @param A First Matrix
 //' @param B Second Matrix
-//' @export
 // [[Rcpp::export]]
 SEXP MatrixPlus_C(Eigen::MatrixXd A, Eigen::MatrixXd B){
   Eigen::MatrixXd C = A + B;
@@ -147,7 +136,6 @@ SEXP MatrixPlus_C(Eigen::MatrixXd A, Eigen::MatrixXd B){
 //' NumxMatrix_C
 //' @param A Number
 //' @param B Matrix
-//' @export
 // [[Rcpp::export]]
 SEXP NumxMatrix_C(double A, Eigen::MatrixXd B){
   Eigen::MatrixXd C = A * B;
@@ -160,7 +148,6 @@ SEXP NumxMatrix_C(double A, Eigen::MatrixXd B){
 //' @param w1R w1 vector
 //' @param w2R w2 vector
 //' @param nminuspx n-px
-//' @export
 // [[Rcpp::export]]
 NumericMatrix LR0_fixRho_C(NumericVector LamdasR,
                            NumericVector muR,
@@ -210,8 +197,8 @@ NumericMatrix LR0_fixRho_C(NumericVector LamdasR,
 //' @param wR w matrix
 //' @param LamdasR Lamdas vector
 //' @param nminuspx n-px
-//' @param all_rho
-//' @export
+//' @param all_rho the rho vector
+//' @param LR0_allRhoR the matrix of likelihood ratio
 // [[Rcpp::export]]
 NumericMatrix doubleloop(NumericMatrix K1R,
                             NumericMatrix K2R,
@@ -321,7 +308,7 @@ return Rcpp::wrap(LR0_allRho);
 //' @param w1R w1 vector
 //' @param w2R w2 vector
 //' @param nminuspx n-px
-//' @export
+//' @param xiR vector
 // [[Rcpp::export]]
 NumericMatrix LR0_fixRho_LRT_C(NumericVector LamdasR,
                            NumericVector muR,
@@ -373,7 +360,6 @@ NumericMatrix LR0_fixRho_LRT_C(NumericVector LamdasR,
 //' @param nminuspx n-px
 //' @param all_rho rho vector
 //' @param LR0_allRhoR LR0_allRhomatrix
-//' @export
 // [[Rcpp::export]]
 NumericMatrix doubleloop_LRT(NumericMatrix K1R,
                          NumericMatrix K2R,

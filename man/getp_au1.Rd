@@ -7,7 +7,9 @@
 getp_au1(null, LR)
 }
 \arguments{
-\item{LR}{}
+\item{null}{a vector of likelihood ratio under the null hypothesis. Generated from simulation}
+
+\item{LR}{the likelihood of the data}
 }
 \value{
 

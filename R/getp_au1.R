@@ -2,13 +2,12 @@
 
 #' Title
 #'
-#' @param null
-#' @param LR
+#' @param null a vector of likelihood ratio under the null hypothesis. Generated from simulation
+#' @param LR the likelihood of the data
 #'
 #' @return
 
 #'
-#' @examples
 getp_au1 = function(null, LR){
   t1 = mean(null)
   t2 = mean(null^2)

@@ -7,7 +7,14 @@
 getp_Qreg_P(null, LR, qmax = 1)
 }
 \arguments{
-\item{qmax}{}
+\item{null}{a vector of likelihood ratio under the null hypothesis. Generated from simulation}
+
+\item{LR}{the likelihood of the data}
+
+\item{qmax}{quantile of likelihood ratio vector. Most time put as 1, all the likelihood ratio vector under the null hypothesis will be used}
+}
+\value{
+
 }
 \description{
 Title

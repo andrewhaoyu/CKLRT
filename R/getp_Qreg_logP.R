@@ -1,13 +1,12 @@
 #' Title
 #'
-#' @param null
-#' @param LR
-#' @param qmax
+#' @param null a vector of likelihood ratio under the null hypothesis. Generated from simulation
+#' @param LR the likelihood of the data
+#' @param qmax quantile of likelihood ratio vector. Most time put as 1, all the likelihood ratio vector under the null hypothesis will be used
 #'
 #' @return
-#' @export
 #'
-#' @examples
+#'
 getp_Qreg_logP = function(null, LR, qmax = 1){
   # minimize lse between log theoratical p and empirical p
   # qmax =1, all LR0 are used.
@@ -30,14 +29,13 @@ getp_Qreg_logP = function(null, LR, qmax = 1){
 
 #' Title
 #'
-#' @param null
-#' @param LR
-#' @param qmax
+#' @param null a vector of likelihood ratio under the null hypothesis. Generated from simulation
+#' @param LR the likelihood of the data
+#' @param qmax quantile of likelihood ratio vector. Most time put as 1, all the likelihood ratio vector under the null hypothesis will be used
 #'
 #' @return
-#' @export
 #'
-#' @examples
+#'
 getp_Qreg_P = function(null, LR, qmax = 1){
   # minimize lse between theoratical p and empirical p
   # qmax =1, all LR0 are used.
@@ -60,14 +58,13 @@ getp_Qreg_P = function(null, LR, qmax = 1){
 
 #' Title
 #'
-#' @param null
-#' @param LR
-#' @param qmax
+#' @param null  a vector of likelihood ratio under the null hypothesis. Generated from simulation
+#' @param LR the likelihood of the data
+#' @param qmax quantile of likelihood ratio vector. Most time put as 1, all the likelihood ratio vector under the null hypothesis will be used
 #'
 #' @return
-#' @export
 #'
-#' @examples
+#'
 getp_Qreg_dir = function(null, LR, qmax = 1){
   # minimize lse between LR0 and theoratical quantile of aChi_d
   prop = mean(null == 0) # probability of being zero
