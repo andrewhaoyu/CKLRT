@@ -137,7 +137,7 @@ omniRLRT_fast = function(y, X,K1, K2, N = 10000, length.rho = 200, length.lambda
     p.au1 = getp_au1(null = LR0, LR = LR)$p
     p.aud= getp_aud_estimate_pi_first(null = LR0, LR = LR)$p
   }
-  out = list(p.dir = p.dir,p.au1 = p.au1,p.aud = p.aud, LR = LR)
+  out = list(p.dir = p.dir,p.aud = p.aud, LR = LR)
   return(out)
   }
 
