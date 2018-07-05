@@ -28,6 +28,7 @@
 #' @import RcppEigen
 #' @import mgcv
 #' @import compiler
+#' @import stats
 
 
 
