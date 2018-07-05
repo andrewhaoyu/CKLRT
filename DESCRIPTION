@@ -3,8 +3,8 @@ Type: Package
 Title: CKLRT (Composite Kernel Machine Regression based on Likelihood Ratio Test)
 Version: 0.2.0
 Author@R: c(
-person("Ni", "Zhao", email = "nzhao10@jhu.edu",
-                  role = c("aut")),
+person("Ni", "Zhao", ,"nzhao10@jhu.edu",
+                  role = "aut"),
 person("Haoyu", "Zhang", email = "andrew.haoyu@gmail.com",
                   role = c("aut", "cre"))
                   )
