@@ -14,3 +14,4 @@ MatrixPlus_C(A, B)
 \description{
 MatrixPlus_C
 }
+\keyword{internal}

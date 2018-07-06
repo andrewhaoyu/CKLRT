@@ -14,3 +14,4 @@ MatMult_C(A, B)
 \description{
 MatMult_C
 }
+\keyword{internal}

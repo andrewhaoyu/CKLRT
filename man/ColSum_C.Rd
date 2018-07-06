@@ -12,3 +12,4 @@ ColSum_C(AA)
 \description{
 ColSum_C
 }
+\keyword{internal}

@@ -3,6 +3,7 @@
 #'
 #' @param null a vector of likelihood ratio under the null hypothesis. Generated from simulation
 #' @param LR the likelihood of the data
+#' @keywords internal
 getp_aud_estimate_pi_first = function(null, LR){
   prop = mean(null == 0) # probability of being zero
   null2 = null[null > 0]

@@ -14,3 +14,4 @@ VecMultMat_C(A, B)
 \description{
 VecMultMat_C
 }
+\keyword{internal}

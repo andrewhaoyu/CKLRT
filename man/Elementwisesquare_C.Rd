@@ -12,3 +12,4 @@ Elementwisesquare_C(AA)
 \description{
 Elementwisesquare_C
 }
+\keyword{internal}

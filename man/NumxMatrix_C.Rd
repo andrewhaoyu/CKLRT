@@ -14,3 +14,4 @@ NumxMatrix_C(A, B)
 \description{
 NumxMatrix_C
 }
+\keyword{internal}

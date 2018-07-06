@@ -14,3 +14,4 @@ Vecplus_C(A, B)
 \description{
 Vecplus_C
 }
+\keyword{internal}

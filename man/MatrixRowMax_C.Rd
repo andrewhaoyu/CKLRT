@@ -12,3 +12,4 @@ MatrixRowMax_C(AA)
 \description{
 MatrixRowMax_C
 }
+\keyword{internal}

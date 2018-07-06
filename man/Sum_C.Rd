@@ -12,3 +12,4 @@ Sum_C(AA)
 \description{
 Sum_C
 }
+\keyword{internal}

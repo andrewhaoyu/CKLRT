@@ -14,3 +14,4 @@ ColSumtwomatrix_C(AA, BB)
 \description{
 ColSumtwomatrix_C
 }
+\keyword{internal}

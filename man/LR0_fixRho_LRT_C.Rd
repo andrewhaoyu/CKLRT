@@ -22,3 +22,4 @@ LR0_fixRho_LRT_C(LamdasR, muR, w1R, w2R, nminuspx, xiR)
 \description{
 LR0_fixRho_LRT_C
 }
+\keyword{internal}

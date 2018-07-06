@@ -12,3 +12,4 @@ ifelsetest_C(x)
 \description{
 ifelsetest_C
 }
+\keyword{internal}

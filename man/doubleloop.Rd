@@ -30,3 +30,4 @@ doubleloop(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho, LR0_allRhoR)
 \description{
 doubleloop
 }
+\keyword{internal}

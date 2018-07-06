@@ -31,3 +31,4 @@ doubleloop_LRT(K1R, K2R, P0R, AR, U1R, wR, LamdasR, nminuspx, all_rho,
 \description{
 doubleloop_LRT
 }
+\keyword{internal}

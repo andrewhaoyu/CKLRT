@@ -20,3 +20,4 @@ LR0_fixRho_C(LamdasR, muR, w1R, w2R, nminuspx)
 \description{
 LR0_fixRho_C
 }
+\keyword{internal}

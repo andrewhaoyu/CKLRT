@@ -16,3 +16,4 @@ getp_Qreg_logP(null, LR, qmax = 1)
 \description{
 Title
 }
+\keyword{internal}
