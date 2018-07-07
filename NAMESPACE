@@ -3,7 +3,6 @@
 export(omniLRT_fast)
 export(omniRLRT_fast)
 import(Rcpp)
-import(RcppEigen)
 import(compiler)
 import(mgcv)
 import(nlme)

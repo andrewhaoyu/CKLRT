@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' set.seed(6)
-#' n = 200 # the number of observations
+#' n = 50 # the number of observations
 #' X = rnorm(n) # the other covariates
 #' p = 2 # two snp in a gene will be simulated
 #' G = runif(n*p)< 0.5
@@ -25,7 +25,6 @@
 #' @importFrom MASS ginv
 #' @import nlme
 #' @import Rcpp
-#' @import RcppEigen
 #' @import mgcv
 #' @import compiler
 #' @import stats
