@@ -2,7 +2,7 @@
 % Please edit documentation in R/omniLRT_fast.R
 \name{omniLRT_fast}
 \alias{omniLRT_fast}
-\title{Composite kernel machine regression based likelihood ratio test. The approximate method for likelihood ratio test tend to be too conservative for small alpha values. We recommend not using it in GWAS}
+\title{Composite kernel machine regression based likelihood ratio test.}
 \usage{
 omniLRT_fast(y, X, K1, K2, N = 10000, length.lambda = 200,
   length.rho = 21)
