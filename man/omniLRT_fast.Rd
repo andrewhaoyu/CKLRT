@@ -2,7 +2,7 @@
 % Please edit documentation in R/omniLRT_fast.R
 \name{omniLRT_fast}
 \alias{omniLRT_fast}
-\title{Composite kernel machine regression based likelihood ratio test}
+\title{Composite kernel machine regression based likelihood ratio test. The approximate method for likelihood ratio test tend to be too conservative for small alpha values. We recommend not using it in GWAS}
 \usage{
 omniLRT_fast(y, X, K1, K2, N = 10000, length.lambda = 200,
   length.rho = 21)
@@ -26,7 +26,7 @@ omniLRT_fast(y, X, K1, K2, N = 10000, length.lambda = 200,
 the result is a list containing three elements. 1. p.dir is the p-value of likelihood ratio test based on emprical distrition. 2. p.aud is the p-value by approximating the null distribution as a mixture of a point mass at zero with probability b and weighted chi square distribution with d degrees of freedom with probality of 1-b. 3. LR is the likelihood ratio test statistics.
 }
 \description{
-Composite kernel machine regression based likelihood ratio test
+Composite kernel machine regression based likelihood ratio test. The approximate method for likelihood ratio test tend to be too conservative for small alpha values. We recommend not using it in GWAS
 }
 \examples{
 set.seed(6)

@@ -1,4 +1,4 @@
-#' Composite kernel machine regression based likelihood ratio test
+#' Composite kernel machine regression based likelihood ratio test. The approximate method for likelihood ratio test tend to be too conservative for small alpha values. We recommend not using it in GWAS
 #'
 #' @param y : y is the vecgtor of the continous outcomes.
 #' @param X : X denotes the additional covariates.
