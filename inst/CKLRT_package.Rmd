@@ -5,7 +5,7 @@ output:
     keep_tex: true
     fig_caption: true
     latex_engine: pdflatex
-    template: /Users/zhangh24/GoogleDrive/project/Ni/Utility/inst/svm.tex
+    template: /Users/haoyuzhang/GoogleDrive/project/Ni/CKLRT_git/inst/svm.tex
 title: "Composite Kernel Machine Regression based on Likelihood Ratio Test with Application for Combined Genetic and Gene-environment Interaction Effect
 "
 #thanks: "Replication files are available on the author's Github account..."
